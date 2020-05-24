@@ -1,0 +1,44 @@
+@keyframes App-logo-spin {                                    
+  from { transform: rotate(0deg); }                                    
+  to { transform: rotate(360deg); }                                    
+}                                    
+
+.AppLogo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 30pt;
+	float: left;
+	margin: 5px;
+}
+.AppLogo2 {
+	animation: App-logo-spin infinite 20s linear reverse;
+	height: 30pt;
+	float: left;
+	margin: 5px;
+}
+
+.AppHeader {
+	background-color: #222;
+	color: white;
+}
+
+.AppTitle {
+	float: left;
+	padding-left: 10px; 
+	padding-right: 10px; 
+	margin:0;
+}
+
+.NavLinks {
+	float:right;
+	padding-left:10px;
+}
+
+.NavLink {
+	margin: 5px;
+	font-size:20pt;
+	color: gray;
+}
+
+.background {
+	background: gray;
+}
