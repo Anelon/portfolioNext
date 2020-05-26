@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import ParticleBackground from './ParticleBackground';
 
 const name = 'Andrew Bell'
 export let siteTitle = 'Kass and Andrew'
@@ -83,6 +84,7 @@ export default function Layout({ children, location }) {
 
 			<main className="cell auto background">
 				{/* TODO add the particle background here I think */}
+                {/*<ParticleBackground />*/}
 				{children}
 			</main>
 		</div>
