@@ -20,7 +20,7 @@ class Portfolio extends Component {
 						</h2>    
 						<p>    
 							Bell lives in Fresno where he tutors computer science a Clovis Community College. He got into tech at a young age mostly playing video games with his older brothers. In more recent years, he enjoys playing video games, watching anime and rock climbing.<br/>
-							He is currently working on compleating his bachelors degree through CSUMB's online computer science degree completeion which at the end of he wishes to become a web developer, backend or full stack.
+							He is currently working on compleating his bachelors degree through CSUMB's online computer science degree completeion which at the end of he wishes to become a software engineer.
 							{/*need to add description of the program (outcomes), and your goals*/}
 						</p>
 						{/*Center me later I guess and get rid of white?*/}

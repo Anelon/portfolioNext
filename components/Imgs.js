@@ -31,7 +31,7 @@ class Imgs extends Component {
 		let imgList = imgs.map(function(src, index){    
 			let singleImg = src.length === 4;    
 			let image;    
-			let desc = <p><br/>{singleImg ? src[3] : src[4]}</p>;    
+			let desc = <div><br/><p>{singleImg ? src[3] : src[4]}</p></div>;
 			if(!singleImg) {    
 				image = (     
 					<div>    

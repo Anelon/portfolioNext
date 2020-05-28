@@ -84,8 +84,10 @@ export default function Layout({ children, location }) {
 
 			<main className="cell auto background">
 				{/* TODO add the particle background here I think */}
-                {/*<ParticleBackground />*/}
+				<ParticleBackground />
+				<div className="content">
 				{children}
+				</div>
 			</main>
 		</div>
 	)
