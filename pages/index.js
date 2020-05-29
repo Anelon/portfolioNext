@@ -41,6 +41,8 @@ export default function Home() {
 								</a>
 							</Link>
 						</div>
+						{/* TODO add key projects here I guess */}
+						{/*
 						<div className="large-3 medium-4 cell">
 							<Link href="/CSUMBPortfolio">
 								<a>
@@ -51,6 +53,7 @@ export default function Home() {
 								</a>
 							</Link>
 						</div>
+						*/}
 					</div>
 				</div>
 			</div>

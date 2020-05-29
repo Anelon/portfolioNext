@@ -28,8 +28,8 @@ export default function Layout({ children, location }) {
 				<li><Link href="/Portfolio/Code">
 					<a className={styles.NavLink}>Code</a>
 				</Link></li>
-				<li><Link href="/Portfolio/Video">
-					<a className={styles.NavLink}>Video</a>
+				<li><Link href="/CSUMBPortfolio/CST338">
+					<a className={styles.NavLink}>Recent Class</a>
 				</Link></li>
 			</li>
 		);
