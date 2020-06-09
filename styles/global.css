@@ -1,6 +1,28 @@
 a {
 	color: black;
 }
+.content {
+	z-index: 1;
+	height: 100%;
+}
+
+p {
+	background: gray;
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px;
+}
+
+background {
+	position: absolute;
+	z-index: -1;
+	background: gray;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+}
 
 .valign-center {
 	position: relative;
@@ -14,7 +36,7 @@ a {
 .App {
 	text-align: center;
 	height: 100%;
-	background-color: gray;
+	/*background-color: gray;*/
 }
 .full {
 	height:100%;
@@ -70,7 +92,7 @@ a {
 	padding:10px;
 	margin-bottom: 10px;
 	color: black;
-	background-color: #d7383900;
+	background-color: gray;
 	border:solid;
 	border-color: black;
 	border-width:1vw;
@@ -82,7 +104,7 @@ a {
 	border-color: darkgray;
 }
 .CardImg {
-	max-height: 50vh;
+	max-height: 30vh;
 }
 .paper {
 	width: 90vw;
@@ -92,7 +114,7 @@ a {
 	margin-left: 5vw;
 }
 .background {
-	background-color: gray;
+	/*background-color: gray;*/
 }
 .white {
 	color: gray;
@@ -104,9 +126,9 @@ a {
 	border-color: #fff;
 	border-width: 1vw;
 	margin: auto;
-	overflow-y: scroll;
+	overflow-y: auto;
 	position: relative;
-	height: 85vh;
+	height: 75vh;
 }
 .fullScroll {
 	margin: auto;
@@ -132,10 +154,10 @@ a {
 }
 
 .tabz {
-    margin: 0;
-    border: 2px solid black;
-    background: gray;
-    list-style-type: none;
+	margin: 0;
+	border: 2px solid black;
+	/*background: gray;*/
+	list-style-type: none;
 }
 
 .tab-list {
@@ -151,16 +173,20 @@ a {
 	list-style: none;
 	margin-bottom: -2px;
 	padding: 0.75rem;
-   border-style: solid;
-   border-width: 0px 1px 2px 1px;
+	border-style: solid;
+	border-width: 0px 1px 2px 1px;
 }
 
 .tab-list-active {
 	font-weight: bold;
 	background-color: gray;
 	border: solid;
-   border-bottom-color: gray;
+	border-bottom-color: gray;
 	border-width: 0px 1px 3px 1px;
+}
+
+.tab-content {
+	padding: 15px;
 }
 .videoHold {
 	height:400px;
@@ -171,13 +197,13 @@ a {
 	transform: translate(-50%,0);
 }
 .code {
-	width: 100vw;
+	width: 100%;
 	padding: 10px;
 }
 .holder {
 	padding-left:10px;
 	padding-right:10px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	position: relative;
 	max-height: 130vh;
 }

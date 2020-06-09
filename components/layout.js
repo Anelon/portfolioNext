@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import ParticleBackground from './ParticleBackground';
 
 const name = 'Andrew Bell'
 export let siteTitle = 'Kass and Andrew'
@@ -27,15 +28,15 @@ export default function Layout({ children, location }) {
 				<li><Link href="/Portfolio/Code">
 					<a className={styles.NavLink}>Code</a>
 				</Link></li>
-				<li><Link href="/Portfolio/Video">
-					<a className={styles.NavLink}>Video</a>
+				<li><Link href="/CSUMBPortfolio/CST338">
+					<a className={styles.NavLink}>Recent Class</a>
 				</Link></li>
 			</li>
 		);
 	} else if (location === "Andrew Bell ILP" || location[0] === "C") { //csumb portfolio navbar
 		Navi = (
 			<li>
-				<li><Link href="/CSUMBPortfolio">
+				<li><Link href="/Portfolio">
 					<a className={styles.NavLink}>Home</a>
 				</Link></li>
 				<li><Link href="/CSUMBPortfolio/CST338">
@@ -83,7 +84,10 @@ export default function Layout({ children, location }) {
 
 			<main className="cell auto background">
 				{/* TODO add the particle background here I think */}
+				<ParticleBackground />
+				<div className="content">
 				{children}
+				</div>
 			</main>
 		</div>
 	)
