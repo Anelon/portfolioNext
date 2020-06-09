@@ -21,17 +21,9 @@ export default function Home() {
 				</div>
 				<div className="cell expand">
 					<div className="grid-x grid-padding-x">
-						<div className="large-3 medium-4 cell">
-							<a href="/japan">
-								{/*<Link to="/Japan"> change back when galery is working*/}
-								<div className="Card small text-center">
-									<img src="/images/WaterTori.jpg" alt="Japan" className="CardImg"></img>
-									<br/>Japan Trips
-								</div>
-								{/*</Link>*/}
-							</a>
-						</div>
-						<div className="large-3 medium-4 cell">
+						<div className="medium-1 cell" />
+
+						<div className="medium-5 cell">
 							<Link href="/Portfolio">
 								<a>
 									<div className="Card small text-center">
@@ -41,6 +33,18 @@ export default function Home() {
 								</a>
 							</Link>
 						</div>
+						<div className="medium-5 cell">
+							<a href="/japan">
+								{/*<Link to="/Japan"> change back when galery is working*/}
+								<div className="Card small text-center">
+									<img src="/images/WaterTori.jpg" alt="Japan" className="CardImg"></img>
+									<br/>Japan Trips
+								</div>
+								{/*</Link>*/}
+							</a>
+						</div>
+
+						<div className="medium-1 cell" />
 						{/* TODO add key projects here I guess */}
 						{/*
 						<div className="large-3 medium-4 cell">

@@ -8,6 +8,7 @@ class ClassCard extends Component {
 			title: "Andrew Bell ILP",
 			className: this.props.className,
 			available: this.props.available,
+			thumbnail: this.props.thumbnail,
 			//vidsrc: this.props.src,
 		}
 	}
@@ -52,7 +53,7 @@ class ClassCards extends Component {
 	render() {
 		let classList = this.state.classes.map(function(classe, index){
 			return (
-				<ClassCard className={classe[0]} available={classe[1]} />
+				<ClassCard className={classe.name} available={classe.hasTaken} thumbnail={classe.thumbnail} />
 			)
 		});
 		return (

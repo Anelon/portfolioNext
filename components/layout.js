@@ -36,7 +36,7 @@ export default function Layout({ children, location }) {
 	} else if (location === "Andrew Bell ILP" || location[0] === "C") { //csumb portfolio navbar
 		Navi = (
 			<li>
-				<li><Link href="/CSUMBPortfolio">
+				<li><Link href="/Portfolio">
 					<a className={styles.NavLink}>Home</a>
 				</Link></li>
 				<li><Link href="/CSUMBPortfolio/CST338">

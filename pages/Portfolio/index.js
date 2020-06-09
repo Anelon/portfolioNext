@@ -12,30 +12,45 @@ class Portfolio extends Component {
 		}
 	}
 	render() {
+		let highlightProjects = [
+			//[Class Name, hasTaken]
+			{name:"Robot Saga - Python", hasTaken:true},
+			// https://github.com/DuskEcho/RobotSagaRedux
+			{name:"Solar System - webgl, JavaScript", hasTaken:true},
+			// https://github.com/Anelon/CST325/tree/master/final-project
+			{name:"Basic RPG - JavaScript", hasTaken:true},
+			// https://anelon.github.io/rpg2/
+			{name:"Parking Detection - A whole mess of things", hasTaken:true},
+			// https://github.com/Alipongoy/CSCI152Pi/wiki
+			{name:"Battle Ship Royale - C++, ZMQ (networking)", hasTaken:true},
+			// not on github yet
+			{name:"Tic Tac Toe (AI) - React.js", hasTaken:true},
+			// not on github yet
+];
 		//TODO order classes by coolness/relavance
 		let classesCSUMB = [
 			//[Class Name, hasTaken]
-			["CST 300 - Major Proseminar", true],
-			["CST 205 - Multimedia and Design Programming (Python)", true],
-			["CST 338 - Software Design (Java)", true],
-			["CST 361 - CS and Community Service (Service Learning)", false],
-			["CST 363 - Database Management (MySQL)", false],
-			["CST 311 - Intro to Computer Networking", false],
-			["CST 336 - Internet programming (JavaScript)", false],
-			["CST 325 - Graphics Programming (JavaScript)", false],
-			["CST 370 - Algorithms (C++)", false],
-			["CST 438 - Software Engineering", false],
-			["CST 499 - Directed Group Capstone", false],
+			{name:"CST 300 - Major Proseminar", hasTaken:true},
+			{name:"CST 205 - Multimedia and Design Programming (Python)", hasTaken:true},
+			{name:"CST 338 - Software Design (Java)", hasTaken:true},
+			{name:"CST 361 - CS and Community Service (Service Learning)", hasTaken:true},
+			{name:"CST 363 - Database Management (MySQL)", hasTaken:true},
+			{name:"CST 311 - Intro to Computer Networking", hasTaken:false},
+			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:false},
+			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:false},
+			{name:"CST 370 - Algorithms (C++)", hasTaken:false},
+			{name:"CST 438 - Software Engineering", hasTaken:false},
+			{name:"CST 499 - Directed Group Capstone", hasTaken:false},
 		];
 		//TODO make these classes
 		let classesLowerDiv = [
 			//[Class Name, hasTaken]
-			["CSCI 40 - Programming Concepts (C++)", false],
-			["CSCI 41 - Data Structures (C++)", false],
-			["CSCI 26 - Descrete Math (C++)", false],
-			["CSCI 45 - Assembly (Raspi, arm32, C, python)", false],
-			["CSCI 150 - Software Engineering 1 (JavaScript)", false],
-			["CSCI 152 - Software Engineering 2 (JavaScript, PHP, Python)", false],
+			{name:"CSCI 40 - Programming Concepts (C++)", hasTaken:false},
+			{name:"CSCI 41 - Data Structures (C++)", hasTaken:false},
+			{name:"CSCI 26 - Descrete Math (C++)", hasTaken:false},
+			{name:"CSCI 45 - Assembly (Raspi, arm32, C, python)", hasTaken:false},
+			{name:"CSCI 150 - Software Engineering 1 (JavaScript)", hasTaken:false},
+			{name:"CSCI 152 - Software Engineering 2 (JavaScript, PHP, Python)", hasTaken:false},
 		];
 		return(
 			<Layout location={this.state.title}>
@@ -56,6 +71,12 @@ class Portfolio extends Component {
 					<div className="medium-6 cell">
 						<Tabs>
 							{/* Add highlight projets */}
+							<div label="Projects">
+								<div className="small text-center">
+									<h2><strong>Hightlight Projects</strong></h2>
+								</div>
+								<ClassCards classes={highlightProjects}/>
+							</div>
 							<div label="CSUMB">
 								<div className="small text-center">
 									<h2><strong>CSU Monterey Bay</strong></h2>

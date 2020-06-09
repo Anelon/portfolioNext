@@ -18,7 +18,7 @@ const fadeRate = 10;
 const minWhite = 128;
 const maxWhite = 200;
 const maxWhiteHex = `#${maxWhite.toString(16)}${maxWhite.toString(16)}${maxWhite.toString(16)}`;
-console.log(maxWhite.toString(16), maxWhiteHex);
+//console.log(maxWhite.toString(16), maxWhiteHex);
 
 
 //function to scale the fade in
