@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 2368"
+    "start": "next start"
   },
   "dependencies": {
     "fs": "0.0.1-security",
