@@ -51,4 +51,4 @@ class CST361 extends Component {
 	}
 }
 
-export default CST338;
+export default CST361;

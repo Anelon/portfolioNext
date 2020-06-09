@@ -35,7 +35,7 @@ class Portfolio extends Component {
 						{/*<img src={CSUMBLogo}alt="CSUMB" className="CardImg middle"></img>*/}
 					</div>
 					<div className="medium-6 cell scroll">
-						<ClassCards/>
+						{/*<ClassCards/>*/}
 					</div>
 				</div>
 
