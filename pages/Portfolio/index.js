@@ -14,18 +14,35 @@ class Portfolio extends Component {
 	render() {
 		let highlightProjects = [
 			//[Class Name, hasTaken]
-			{name:"Robot Saga - Python", hasTaken:true},
-			// https://github.com/DuskEcho/RobotSagaRedux
-			{name:"Solar System - webgl, JavaScript", hasTaken:true},
-			// https://github.com/Anelon/CST325/tree/master/final-project
-			{name:"Basic RPG - JavaScript", hasTaken:true},
-			// https://anelon.github.io/rpg2/
-			{name:"Parking Detection - A whole mess of things", hasTaken:true},
-			// https://github.com/Alipongoy/CSCI152Pi/wiki
-			{name:"Battle Ship Royale - C++, ZMQ (networking)", hasTaken:true},
-			// not on github yet
-			{name:"Tic Tac Toe (AI) - React.js", hasTaken:true},
-			// not on github yet
+			{
+				name:"Robot Saga - Python", hasTaken:true,
+				link:"/CSUMBPortfolio/CST205"
+			},
+			{
+				name:"Solar System - webgl, JavaScript", hasTaken:true,
+				link:"//anelon.github.io/SolarSystem",
+				ghLink:"//github.com/Anelon/SolarSystem/"
+			},
+			{
+				name:"Basic RPG - JavaScript", hasTaken:true,
+				link:"//anelon.github.io/rpg2/",
+				ghLink:"//github.com/Anelon/rpg2/"
+			},
+			{
+				name:"Parking Detection - HTML, JS, PHP, MySQL, Python, Raspberry Pi, OpenCV", hasTaken:true,
+				link:"//github.com/Alipongoy/CSCI152Pi/wiki/How-it-works",
+				img:"https://camo.githubusercontent.com/813de90b696ad7909f33a71f9c658668ba0b2e91/68747470733a2f2f692e696d6775722e636f6d2f63796f734138562e706e67",
+			},
+			{
+				name:"Tic Tac Toe (AI) - React.js", hasTaken:true,
+				link:"//anelon.github.io/reactjs-ttt/",
+				ghLink:"//github.com/Anelon/reactjs-ttt",
+			},
+			/* need to figure out how to present or something
+			{name:"Battle Ship Royale - C++, ZMQ (networking)", hasTaken:true,
+				link:"",
+			},
+			*/
 ];
 		//TODO order classes by coolness/relavance
 		let classesCSUMB = [
