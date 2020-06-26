@@ -14,9 +14,9 @@ class CST300 extends Component {
 		}
 	}
 	render() {
-		//var name = this.state.title;
-		var desc = this.state.classDesc;
-		var videos = [
+		//let name = this.state.title;
+		let desc = this.state.classDesc;
+		let videos = [
 			["Long Version", "https://youtu.be/52cHRIwtUb0"],
 			["Short Version", "https://youtu.be/4Rnkn92Qlhg"]
 		];

@@ -1,0 +1,16 @@
+CST336 deploy.sh
+This is a script that works with my file structure to take the name of the
+current folder and then makes a new branch with the current folder name. That
+branch can then be watched by heroku so that it will automatically be deployed
+from the git repository branch.
+
+https://github.com/Anelon/CST338Submit
+CST338 submit.sh
+I wrote this as an automation step for preparing assignements to be submitted.
+The script uses the a name of submitter and then uses the name of the folder
+to name the submission file, it then formats the code according with the
+class's style guide. Then it fills that file with all of the code
+files in the directory, with header comments to say when each file starts and
+end. After that is sets up a comment at the end to fill a run, if there is any
+files with the prefix input in the directory it does one run of the code for
+each of the inputs.

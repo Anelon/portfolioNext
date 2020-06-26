@@ -20,6 +20,8 @@ const maxWhite = 200;
 const maxWhiteHex = `#${maxWhite.toString(16)}${maxWhite.toString(16)}${maxWhite.toString(16)}`;
 //console.log(maxWhite.toString(16), maxWhiteHex);
 
+let qt;
+
 
 //function to scale the fade in
 function scale(num, outMin, outMax) {
@@ -407,7 +409,6 @@ class ParticleBackground extends Component {
 			//particle.draw();
 			particles.push(particle);
 		}
-		console.log(particles);
 
 		let time = performance.now();
 		this.setState(prevState => ({ 
@@ -425,7 +426,7 @@ class ParticleBackground extends Component {
 		const dt = (currTime - time) / 1000;
 		const center = new Vec2(width/2, height/2);
 		const boundry = new Rectangle(center, width, height);
-		const qt = new QuadTree(boundry, 5);
+		qt = new QuadTree(boundry, 5);
 
 		//reset veriables
 		for(let particle of particles) {

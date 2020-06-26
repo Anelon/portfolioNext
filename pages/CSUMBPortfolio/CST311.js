@@ -10,18 +10,142 @@ class CST338 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 311",
-			classDesc: "The Software Design course focuses on software development with an intro to the Java language.  This course illustrates the software life-cycle and development process. For students that wish to build applications from the ground up, this course will be crucial in providing the necessary framework/structure. For those that don’t, understanding the development process will still be beneficial. As Java is a cross platform language as well as the language of choice for mobile development, the language is especially important to learn.",
-			imgDir: "/images/338images/"
+			classDesc: "This course is described as a “Survey” course on internetworking protocol, security, and industry trends.  As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
+			imgDir: "/images/311images/"
 		}
 	}
 	render() {
 		let desc = this.state.classDesc;
 		let imgDir = this.state.imgDir;
-		let pokeBattleVideo = [
-			["Run of PokeBattle", "https://youtu.be/NwFBZQ4ytwQ"],
-		];
-		let slotGameVideo = [
-			["Casino Game", "https://youtu.be/kpo8mRvB-5U"],
+		let assignments = [
+			{
+				title:"UDP Pinger",
+				code:`### client.py ###
+
+# The client sends a "ping" message package to the UDP server. Then UDP client waits for a second
+# before retransmissions/sends another "ping" message package to the UDP server and it blocks the
+# income "ping" message package. If it the UDP client has to wait longer than 1 second to
+# retransmissions/resends another package, then this would result in loss of packages because the
+# packages that were sent did not get sent back. This program calculates and prints the minimum,
+# maximum, and average RTTs at the end of all pings from the client, the number of packets lost
+# and the packet loss rate (in percentage).  It also computes and prints the estimated RTT,
+# DevRTT, and the TimeoutInterval based on the RTT results.
+
+from __future__ import division #uses division format
+from socket import *  # import socket interfaces
+from time import  time
+from statistics import mean
+from datetime import datetime
+serverName = 'localhost'  # server ip for computers
+serverPort = 12000 # server port number
+clientSocket = socket(AF_INET, SOCK_DGRAM)
+clientSocket.settimeout(1) #sets time out for 1 second and blocks the incoming data package
+                            # for checking connection and package loss
+sequence_number = 1
+TimeoutInterval = 0
+DevRTT = 0
+EstimatedRTT = 0
+lostPackages = 0
+minRTT = -1
+maxRTT = -1
+total = 0
+address = serverName
+
+# You should get the client to wait up to one second for a reply; if no reply
+# is received within one second, your client
+# program should assume that the packet was lost during transmission across the
+# network https://docs.python.org/3/library/socket.html
+
+while sequence_number < 11:
+    start_time = datetime.now().microsecond/1000
+    message = "Ping " + str(sequence_number) + " " + str(datetime.now())
+    # the client sends the message to the server, the client sends the ping message to the server
+    clientSocket.sendto(message.encode(), (serverName, serverPort))
+
+    try:
+        message, address = clientSocket.recvfrom(1024) # message and address is received from the server, the client gets ping back
+        print("Server reply: ", str(message))
+        end_time = datetime.now().microsecond/1000  #end time
+        SampleRTT = end_time-start_time #round trip time for the UPD client to send "ping" and get the "ping" message back
+        print("Server responded: Round trip time (RTT) =", SampleRTT)
+        if minRTT == -1:
+            minRTT = SampleRTT
+        if maxRTT == -1:
+            maxRTT = SampleRTT
+        if SampleRTT < minRTT:
+            minRtt = SampleRTT
+        if SampleRTT > maxRTT:
+            maxRTT = SampleRTT
+        total += SampleRTT
+
+        #(Then compute and print what should be the timeout period based on the RTT results.)
+        #(10 %) Calculate and print the estimated RTT. Consider alpha = 0.125.
+        #Formula: EstimatedRTT = (1- 0.125)*EstimatedRTT + 0.125*SampleRTT
+
+        EstimatedRTT = 0.875*EstimatedRTT + 0.125*SampleRTT
+        print("EstimatedRTT =", EstimatedRTT)
+
+        #( (10 %) Calculate and print DevRTT. Consider beta = 0.25. Calculate and print Timeout interval.
+
+        #estimate SampleRTT deviation from EstimatedRTT Formula: DevRTT = (1-0.25)*DevRTT +  0.25*|SampleRTT-EstimatedRTT|
+        #if DecRTT is a small value then RTT is constant if not then RTT is inconstant.
+        DevRTT = 0.75*DevRTT + 0.25*abs(SampleRTT-EstimatedRTT)
+
+        print("DevRTT =", DevRTT)
+
+        TimeoutInterval = EstimatedRTT + 4*DevRTT
+        print("TimeoutInterval  =", TimeoutInterval)
+
+    except: #catches the exception errors so the program doesn't crush of the client socket.settimeout(1), if there's connection problems, and the timeout is longer than 1 second then it results in losing packages and udp waits for retransmission
+        print( "Request timed out")
+        lostPackages +=1
+
+        #package lost percentages =( packets lost)/(# packet sent).
+    finally:
+        if sequence_number == 11 :
+            clientSocket.close()  #closes connection
+            percentage = "{0:.0f}%".format((lostPackages/sequence_number)*100)
+    percentage = "{0:.0f}%".format((lostPackages/sequence_number)*100)
+    print("Ping statistics for", address)
+    print("Packets: Sent =", sequence_number, "Received =", sequence_number - lostPackages, "Lost = ", lostPackages, "(", percentage, "loss),")
+    sequence_number +=1
+
+sequence_number -= 1 #fix off by one in avg calcuation
+#( Your client software will need to determine and print out the minimum, maximum, and average RTTs at the end of all pings from the client along with printing out the number of packets lost and the packet loss rate (in percentage).  Then compute and print what should be the timeout period based on the RTT results. )
+recieved = sequence_number - lostPackages
+avgRTT = total/recieved
+print("Approximate round trip times in milli-seconds:")
+print ("Minimum =", '{0:.2f}'.format(minRTT),"ms, Maximum =",'{0:.2f}'.format(maxRTT),"ms Average =", '{0:.2f}'.format(avgRTT),"ms")
+
+
+
+
+# UDPPingerServer.py
+# We will need the following module to generate randomized lost packets
+import random
+from socket import *
+# Create a UDP socket
+# Notice the use of SOCK_DGRAM for UDP packets
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+# Assign IP address and port number to socket
+serverSocket.bind(('', 12000))
+while True:
+    # Generate random number in the range of 0 to 10
+    rand = random.randint(0, 10)
+    print ("random number is ", rand)
+    # Receive the client packet along with the address it is coming from
+    message, address = serverSocket.recvfrom(1024)
+    # Capitalize the message from the client
+    message = message.upper()
+    # If rand is less is than 4, we consider the packet lost and do not respond
+    if rand < 4:
+        print ("Packet is lost ")
+        continue
+    # Otherwise, the server responds
+    serverSocket.sendto(message, address)`,
+				img1:"udpPinger.png",
+				desc:"In this project I was the team leader which means I was in charge of coordinating who does which part of the assignement and write up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time."
+			},
 		];
 
 		return (
@@ -30,56 +154,7 @@ class CST338 extends Component {
 					{/*<h1 className="text-center">{name}</h1>*/}
 					<p className="desc">{desc}</p>
 					{/* requires 2 items in */}
-					<Tabs>
-						<div label="UDP Pinger">
-							<div>
-								{/* make link look better at somepoint */}
-								<div class="grid-x grid-margin-x">
-									<div className="cell medium-6 large-6" >
-										<p>
-											In this project I was the team leader which means I was in charge of coordinating who does which part of the assignement and write up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time.
-										</p>
-										<a href="https://github.com/Anelon/CSUMBfolio/tree/master/CST338/PokeBattleAndroid" className="codeLink">Code in Github</a>
-									</div>
-									<div className="cell medium-6 large-6" >
-										<Videos videos={pokeBattleVideo}/>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div label="Text Slot Game">
-							<div>
-								{/* make link look better at somepoint */}
-								<div class="grid-x grid-margin-x">
-									<div className="cell medium-6 large-6" >
-										<p>
-											This was an interesting but not that challenging project. We were tasked with making a simple slot game as a way of randomizing strings based on simple percentages. The video included shows much of the aproach took but it was. One of the weird spots I ran into while working on this assignment was the strange stats compared to what should be expected from a slot game (giving the user way too many chances of winning).
-										</p>
-										<a href="https://github.com/Anelon/CSUMBfolio/blob/master/CST338/Assig2/Assig2.java" className="codeLink">Code in Github</a>
-									</div>
-									<div className="cell medium-6 large-6" >
-										<Videos videos={slotGameVideo}/>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div label="Card Game">
-							<div>
-								{/* make link look better at somepoint */}
-								<div class="grid-x grid-margin-x">
-									<div className="cell medium-6 large-6" >
-										<p>
-											A card game that was made based off of a previous assignment using Java's Swing library. The game is ment to allow the user to select a card and then a pile of cards, it would then verify if the card is playable (the card is one number value above or below the card last played on that pile), then the AI will run it's turn. If both are can not play new hands are delt untill the deck runs out of card.
-										</p>
-										<a href="https://github.com/Anelon/CST338/blob/master/Assig6/src/MVC.java" className="codeLink">Code in Github</a>
-									</div>
-									<div className="cell medium-6 large-6" >
-										<img src={`${imgDir}cardGame.jpg`} alt="Card Game" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</Tabs>
+					<Imgs imgs={assignments} imgDir={this.state.imgDir} lang={"python"} />
 				</div>
 			</Layout>
 											);

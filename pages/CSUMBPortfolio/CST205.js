@@ -15,10 +15,11 @@ class CST205 extends Component {
 		}
 	}
 	render() {
-		var desc = this.state.classDesc;
-		var midterm = [
-			["Cell Shading - Midterm", 
-`#Cell Shadded
+		let desc = this.state.classDesc;
+		let midterm = [
+			{
+				title:"Cell Shading - Midterm", 
+				code:`#Cell Shadded
 def simpleCopy(mypic):
 		width = getWidth(mypic)
 		height = getHeight(mypic)
@@ -131,10 +132,15 @@ def celShaded():
 		recolor(pic, outline)
 		explore(outline)
 		writePictureTo(outline, path + "CelShaded.jpg")
-		return pic`,"cellShade.jpg","cellShadePre.jpg", "This was a really cool project, after seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors were and then collor in those lines with simplified colors from the origional image."]];
-		var collages = [
-			["Japan Collage", 
-`def makeCollage():
+		return pic`,
+				img1:"cellShade.jpg",
+				img2:"cellShadePre.jpg",
+				desc:"This was a really cool project, after seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors were and then collor in those lines with simplified colors from the origional image."}
+		];
+		let collages = [
+			{
+				title:"Japan Collage", 
+				code:`def makeCollage():
 	path = "F:/Programing/CSUMB/CSUMBfolio/CST205/Lab5Imgs/"
 	width = 3300
 	height = 2550
@@ -189,9 +195,12 @@ def celShaded():
 
 	explore(pic)
 	writePictureTo(pic, path + "Out.jpg")
-	return pic`,"collage.jpg", "This was a fun project to make as it was fun to put a few of the pictures I had taken across my trips to Japan together. The hard part of this assignment was finding which filters to put on pictures that would make them look better."],
-			["St. Patrick's Day Card", 
-`def whiteCopy(src, target, targetX, targetY):
+	return pic`,
+				img1:"collage.jpg",
+				desc:"This was a fun project to make as it was fun to put a few of the pictures I had taken across my trips to Japan together. The hard part of this assignment was finding which filters to put on pictures that would make them look better."},
+			{
+				title:"St. Patrick's Day Card", 
+				code:`def whiteCopy(src, target, targetX, targetY):
 	width = getWidth(src)
 	height = getHeight(src)
 	#prevent image from going over the edge
@@ -239,9 +248,12 @@ def placeShadowText(text, pic, posx, posy):
 	addTextWithStyle(pic, posx, posy, text, style, color)
 	color = white
 	addTextWithStyle(pic, posx-5, posy-2, text, style, color)
-	#repaint(pic)`, "card.jpg", "For this collage we were tasked with making a card for St. Patrick's Day which. To make this we modified our green screen code to work with white backgrounds. The problem was the first attempt there was not the drop shadow on the text so it didn't contrast much with the background so I added a placeShadowText function to make placing a shadow on the text easier."],
-			["Green Screen", 
-`def greenCopy(src, target, targetX, targetY):
+	#repaint(pic)`,
+				img1:"card.jpg", 
+				desc:"For this collage we were tasked with making a card for St. Patrick's Day which. To make this we modified our green screen code to work with white backgrounds. The problem was the first attempt there was not the drop shadow on the text so it didn't contrast much with the background so I added a placeShadowText function to make placing a shadow on the text easier."},
+			{
+				title:"Green Screen", 
+				code:`def greenCopy(src, target, targetX, targetY):
 	width = getWidth(src)
 	height = getHeight(src)
 	#prevent image from going over the edge
@@ -266,11 +278,15 @@ def chromakey():
 	newPic = greenCopy(trex, background, left, bottom-getHeight(trex))
 	newPic = greenCopy(obama, newPic, right-getWidth(obama), bottom-getHeight(obama))
 	repaint(newPic)
-	return newPic`, "chromaKey.png", "Making a chroma key filter was not that difficult, the hardest part as with most of these assignments was figuring out which pictures to go with. But when my team found the Obama interview image someone sugested him interviewing a Trex which picture was then found and so we put them in an interview background. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."],
+	return newPic`,
+				img1:"chromaKey.png",
+				desc:"Making a chroma key filter was not that difficult, the hardest part as with most of these assignments was figuring out which pictures to go with. But when my team found the Obama interview image someone sugested him interviewing a Trex which picture was then found and so we put them in an interview background. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."
+			},
 		];
-		var color = [
-			["Artify", 
-`def artify():
+		let color = [
+			{
+				title:"Artify", 
+				code:`def artify():
 	file = pickAFile()
 	pic = makePicture(file)
 	for p in getPixels(pic):
@@ -292,9 +308,14 @@ def chromakey():
 		elif(b>63 and b<128): setBlue(p, 95)
 		elif(b>127 and b < 192): setBlue(p, 159)
 		else: setBlue(p, 223)
-	show(pic)`, "artify.jpg", "artifyPre.jpg", "This was a cool filter to do as I personally like the cell shadded look and simplifying the colors is one step closer to getting to that goal."],
-			["Better Black and White", 
-`def betterBnW():
+	show(pic)`,
+				img1:"artify.jpg",
+				img2:"artifyPre.jpg",
+				desc:"This was a cool filter to do as I personally like the cell shadded look and simplifying the colors is one step closer to getting to that goal."
+			},
+			{
+				title:"Better Black and White", 
+				code:`def betterBnW():
 	pic = get_pic()
 	pixels = getPixels(pic)
 	for px in getPixels(pic):
@@ -304,9 +325,14 @@ def chromakey():
 		avg = (r*0.299 + g*0.587 + b*0.114)
 		luminanceColors = makeColor(avg,avg,avg)
 		setColor(px, luminanceColors)
-	repaint(pic)`, "bnw.jpg", "bnwPre.jpg", "Better black and white was interesting to learn how each color actually effects the precieved brightness of an image. One issue I had with this filter was accidentally dividing the average calculation by 3 leaving the image much darker than intended."],
-			["Negative", 
-`def makeNegative(pic):
+	repaint(pic)`,
+				img1:"bnw.jpg",
+				img2:"bnwPre.jpg",
+				desc:"Better black and white was interesting to learn how each color actually effects the precieved brightness of an image. One issue I had with this filter was accidentally dividing the average calculation by 3 leaving the image much darker than intended."
+			},
+			{
+				title:"Negative", 
+				code:`def makeNegative(pic):
 	pixels = getPixels(pic)
 	for p in pixels:
 		r = 255 - getRed(p)
@@ -315,9 +341,14 @@ def chromakey():
 		setRed(p, r)
 		setGreen(p, g)
 		setBlue(p, b)
-	repaint(pic)`, "negative.jpg", "negativePre.jpg", "Negative is a very generic filter that I feel almost never looks good but is always fun to see what the inverted colors looks like."],
-			["Rose-colored Glasses", 
-`def roseColoredGlasses(pic):
+	repaint(pic)`,
+				img1:"negative.jpg",
+				img2:"negativePre.jpg",
+				desc:"Negative is a very generic filter that I feel almost never looks good but is always fun to see what the inverted colors looks like."
+			},
+			{
+				title:"Rose-colored Glasses", 
+				code:`def roseColoredGlasses(pic):
 	pixels = getPixels(pic)
 	for p in pixels:
 		#Boost Red lower others
@@ -331,11 +362,16 @@ def chromakey():
 		setRed(p, r)
 		setGreen(p, g)
 		setBlue(p, b)
-	repaint(pic)`, "rose.jpg", "rosePre.jpg", "Viewing the world through rose colored glasses is a saying that doesn't really make much sense to me but the filter was probably one of the weirdest to write, at first we tried to write the filter by multiplying values but that was not really working so I adjusted it to be a flat addition and subtraction to the values giving more of the red look."]
+	repaint(pic)`,
+				img1:"rose.jpg", 
+				img2:"rosePre.jpg",
+				desc:"Viewing the world through rose colored glasses is a saying that doesn't really make much sense to me but the filter was probably one of the weirdest to write, at first we tried to write the filter by multiplying values but that was not really working so I adjusted it to be a flat addition and subtraction to the values giving more of the red look."
+			}
 		];
-		var pixel = [
-			["Line Drawing", 
-`def betterBnW(pic):
+		let pixel = [
+			{
+				title:"Line Drawing", 
+				code:`def betterBnW(pic):
 	width = getWidth(pic)
 	height = getHeight(pic)
 	for x in range (0, width):
@@ -370,17 +406,27 @@ def lineDraw(pic):
 				else: setColor(p, white)
 	writePictureTo(pic, path + "line.jpg")
 	explore(pic)
-	return pic`, "line.jpg", "linePre.jpg", "I liked how this one looked almost hand drawn image and it was really cool to see how it changed an image. I ran this filter with the prelining as a simplified version of the Artify function. Results of this testing may be seen later. Figuring out how much was echough of a tolerance in attempts of drawing lines but not too many of to little I ended at 35, which was just because it looked good."],
-			["Top-to-bottom mirror", 
-`def mirrorHorizontalTop(mypic):
+	return pic`,
+				img1:"line.jpg",
+				img2:"linePre.jpg",
+				desc:"I liked how this one looked almost hand drawn image and it was really cool to see how it changed an image. I ran this filter with the prelining as a simplified version of the Artify function. Results of this testing may be seen later. Figuring out how much was echough of a tolerance in attempts of drawing lines but not too many of to little I ended at 35, which was just because it looked good."
+			},
+			{
+				title:"Top-to-bottom mirror", 
+				code:`def mirrorHorizontalTop(mypic):
 	width = getWidth(mypic)
 	height = getHeight(mypic)
 	for x in range (0, width):
 		 for y in range (0, height/2):
-		 setColor(getPixel(mypic, x, height-y-1), getColor(getPixel(mypic,x, y)))`, "mirror.jpg", "mirrorPre.jpg",
-				"Mirroring and image is very simple, the hard part is figuring out which part of the image you are grabbing from and where you are putting it to."],
-			["Shrink", 
-`def shrink(mypic):
+		 setColor(getPixel(mypic, x, height-y-1), getColor(getPixel(mypic,x, y)))`,
+				img1:"mirror.jpg",
+				img2:"mirrorPre.jpg",
+			
+				desc:"Mirroring and image is very simple, the hard part is figuring out which part of the image you are grabbing from and where you are putting it to."
+			},
+			{
+				title:"Shrink", 
+				code:`def shrink(mypic):
 	width = int(getWidth(mypic)/2)
 	height = int(getHeight(mypic)/2)
 	pic = makeEmptyPicture(width, height)
@@ -389,16 +435,25 @@ def lineDraw(pic):
 			 setColor(getPixel(pic, x, y), getColor(getPixel(mypic, x*2, y*2)))
 	show(pic)
 	writePictureTo(pic, path + "shrink.jpg")
-	return pic`, "shrink.jpg", "shrinkPre.jpg", "Shrink was another one of the easier ones to write as you simply grab every other pixel, it would have been interesting to try and average every 4 pixels into one, another thing that might be fun to try later would be to upscale images as that require more blending of one side to another."],
-			["Red-eye Reduction", 
-`def redEye(pic):
+	return pic`,
+				img1:"shrink.jpg",
+				img2:"shrinkPre.jpg",
+				desc:"Shrink was another one of the easier ones to write as you simply grab every other pixel, it would have been interesting to try and average every 4 pixels into one, another thing that might be fun to try later would be to upscale images as that require more blending of one side to another."
+			},
+			{
+				title:"Red-eye Reduction", 
+				code:`def redEye(pic):
 	for p in getPixels(pic):
 		 if distance(makeColor(178, 0, 0), getColor(p)) < 120:
 			 setColor(p, black)
-	return pic`, "redEye.png", "preRedEye.png", "Durring this assignment I truly realized how many reds there were and how close people's faces are to red colored making it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and its one of the most short and sweet filters on this list."],
+	return pic`,
+				img1:"redEye.png",
+				img2:"preRedEye.png",
+				desc:"Durring this assignment I truly realized how many reds there were and how close people's faces are to red colored making it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and its one of the most short and sweet filters on this list."
+			},
 		];
 
-		var videos = [
+		let videos = [
 			["Final Presentation Video", "https://youtu.be/cNuoDQMsWao"],
 		];
 
@@ -413,12 +468,14 @@ def lineDraw(pic):
 							<div>
 								{/* make link look better at somepoint */}
 								<h2 className="text-center">Robot Saga - Final</h2>
-								<div class="grid-x grid-margin-x">
+								<div className="grid-x grid-margin-x">
 									<div className="cell medium-6 large-6" >
 										<p>
 											This was a really fun final project as we started working on this project around the time of the midterm for the class we put a lot of work into this game and I feel like that really shows as we pushed the IDE JES to its limits. The thing that I worked mostly on as mentioned in the video is the tile generation and general map tile system implemeting strings that could be modified and then running JES, using it as intended one of the few times in this project. 
 										</p>
+										{/* github is private right now
 										<a href="https://github.com/DuskEcho/CST205Final" className="codeLink">Code in Github</a>
+										*/}
 									</div>
 									<div className="cell medium-6 large-6" >
 										<Videos videos={videos}/>
