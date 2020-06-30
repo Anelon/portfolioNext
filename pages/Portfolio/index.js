@@ -16,17 +16,20 @@ class Portfolio extends Component {
 			//[Class Name, hasTaken]
 			{
 				name:"Robot Saga - Python", hasTaken:true,
-				link:"/CSUMBPortfolio/CST205"
+				link:"/CSUMBPortfolio/CST205",
+				img:"/images/205images/RobotSaga.png"
 			},
 			{
 				name:"Solar System - webgl, JavaScript", hasTaken:true,
 				link:"//anelon.github.io/SolarSystem",
-				ghLink:"//github.com/Anelon/SolarSystem/"
+				ghLink:"//github.com/Anelon/SolarSystem/",
+				img:"/images/325images/solarSystem.png"
 			},
 			{
 				name:"Basic RPG - JavaScript", hasTaken:true,
 				link:"//anelon.github.io/rpg2/",
-				ghLink:"//github.com/Anelon/rpg2/"
+				ghLink:"//github.com/Anelon/rpg2/",
+				img:"/images/336images/golemsQuest.png"
 			},
 			{
 				name:"Parking Detection - HTML, JS, PHP, MySQL, Python, Raspberry Pi, OpenCV", hasTaken:true,

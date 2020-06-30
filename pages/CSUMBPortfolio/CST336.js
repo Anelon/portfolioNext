@@ -20,8 +20,6 @@ class CST336 extends Component {
 		let websites = [
 			{
 				title:"Image Search",
-				code:`Some code here or something
-`,
 				img1:"imageSearch.png",
 				desc:"This was using the unsplash API to look up images by keyword and giving the user the option to save and image as a favorite. It was nice to integrate a database with a website, while this was something that I had experience with before I had not done it with node.js, all of my previous serverside coding experience was with PHP in the past.",
 				link:"//anbe19-lab5.herokuapp.com",
@@ -29,7 +27,6 @@ class CST336 extends Component {
 			},
 			{
 				title:"Weather Boost Lookup",
-				code:`Some code here or something`,
 				img1:"weatherBoostLookup.png",
 				desc:"For this assignement we had to use the openweathermap API. This API was cool, however they had changed somethings sense the class and I had to make a few changes to get it working again after the fact when preparing it for the portfolio. Having to use the weather API and casually playing Pokemon Go (they have a system where matching Pokemon types to a certain weather type gives them a boost in power) I decided it would be fun to use the PokeAPI to get a few Pokemon of that type and display them to give the user and idea of what Pokemon to look for.",
 				link:"//anbe19-hw3.herokuapp.com",
@@ -37,7 +34,6 @@ class CST336 extends Component {
 			},
 			{
 				title:"WASM Information",
-				code:`Some code here or something`,
 				img1:"WASMinfo.png",
 				desc:"Tasked with making a basic informational site with multiple pages I decided it would be cool to research Web Assembly a bit more and see what cool projects people have made with it. It was really exciting to see how much can be done in a web browser. This technology shows some exciting potential for the future of web apps.",
 				link:"//anbe19-hw4.herokuapp.com",
@@ -45,8 +41,6 @@ class CST336 extends Component {
 			},
 			{
 				title:"Golem's Quest (Basic RPG Game)",
-				code:`Some code here or something
-`,
 				img1:"golemsQuest.png",
 				desc:"I found this really fun to see how much I could make quickly, as we were required to make a website that used user interaction, while the expectation of the assignment was to make a quiz or something similar I decided to make a basic game.",
 				link:"//anelon.github.io/rpg2",
@@ -66,7 +60,7 @@ class CST336 extends Component {
 					<Imgs imgs={websites} imgDir={this.state.imgDir} lang={"text"}/>
 				</div>
 			</Layout>
-											);
+		);
 	}
 }
 

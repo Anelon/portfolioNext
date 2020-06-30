@@ -9,40 +9,39 @@ export let siteTitle = 'Kass and Andrew'
 
 export default function Layout({ children, location }) {
 	let Navi = ( //default navbar (home)
-		<li>
+		<>
 			<Link href="/">
-				<img
-					src="/images/logo.svg"
-					className={`${styles.AppLogo2} ${utilStyles.borderCircle}`}
-					alt={name}
-				/>
+				<a style={{padding:0}}>
+					<img
+						src="/images/logo.svg"
+						className={`${styles.AppLogo2} ${utilStyles.borderCircle}`}
+						alt={name}
+					/>
+				</a>
 			</Link>
-		</li>
+		</>
 	);
 	if (location === "Portfolio") { //portfolio navbar
 		Navi = (
-			<li>
+			<>
 				<li><Link href="/Portfolio">
 					<a className={styles.NavLink}>Home</a>
 				</Link></li>
-				<li><Link href="/Portfolio/Code">
-					<a className={styles.NavLink}>Code</a>
+				<li><Link href="/CSUMBPortfolio/CST336">
+					<a className={styles.NavLink}>Favorite Class</a>
 				</Link></li>
-				<li><Link href="/CSUMBPortfolio/CST338">
-					<a className={styles.NavLink}>Recent Class</a>
-				</Link></li>
-			</li>
+			</>
 		);
 	} else if (location === "Andrew Bell ILP" || location[0] === "C") { //csumb portfolio navbar
 		Navi = (
-			<li>
+			<>
 				<li><Link href="/Portfolio">
 					<a className={styles.NavLink}>Home</a>
 				</Link></li>
 				<li><Link href="/CSUMBPortfolio/CST338">
 					<a className={styles.NavLink}>Recent Class</a>
 				</Link></li>
-			</li>
+			</>
 		);
 	} else if (location === "Japan Trip") { //gallery navbar
 	}
@@ -69,11 +68,13 @@ export default function Layout({ children, location }) {
 					<ul className="menu align-center">    
 						<li>    
 							<Link href="/">    
-								<img
-									src="/images/logo.svg"
-									className={`${styles.AppLogo} ${utilStyles.borderCircle}`}
-									alt={name}
-								/>
+								<a style={{padding:0}}>
+									<img
+										src="/images/logo.svg"
+										className={`${styles.AppLogo} ${utilStyles.borderCircle}`}
+										alt={name}
+									/>
+								</a>
 							</Link>    
 						</li>    
 						<li><h2 className={styles.AppTitle}>{location || siteTitle}</h2></li>

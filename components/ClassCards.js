@@ -4,30 +4,49 @@ import Link from 'next/link';
 class ClassCard extends Component {
 	constructor(props) {
 		super(props);
-		console.log(this.props.classe);
 		this.state = {
 			title: "Andrew Bell ILP",
 			className: this.props.classe.name,
 			available: this.props.classe.hasTaken,
-			thumbnail: this.props.classe.thumbnail,
+			img: this.props.classe.img,
 			link: this.props.classe.link,
-			//vidsrc: this.props.src,
+			ghLink: this.props.classe.ghLink,
 		}
 	}
+
 	render() {
 		let name = this.state.className;
-		let shortName = name.split(' ').slice(0,2).join('');//takes first 2 words of name
-		let link = "/CSUMBPortfolio/"+shortName;
+		let link = "/";
 		if(this.state.link) link = this.state.link;
-		console.log(this.state.link);
+		else {
+			let shortName = name.split(' ').slice(0,2).join('');//takes first 2 words of name
+			link = "/CSUMBPortfolio/"+shortName;
+		}
+
 		let box;
 		if(this.state.available) {
 			//{/*render={(props) => <Class {...props} handler={this.handler} />}*/}
 			box = (
 				<Link href={link}>
 					<a>
-						<div className="Card small fit">
+						<div className="Card small fit text-center">
+							{this.state.img ? (
+								<img className="CardImg" style={{maxHeight:150}} src={this.state.img} />
+							) : null }
+
 							<h4 className="text-center">{name}</h4>
+
+							{this.state.ghLink ? (
+								<h5>
+									<strong>
+										<Link href={this.state.ghLink}>
+											<a>
+												View in Github
+											</a>
+										</Link>
+									</strong>
+								</h5>
+							) : null }
 						</div>
 					</a>
 				</Link>
@@ -39,6 +58,7 @@ class ClassCard extends Component {
 				</div>
 			);
 		}
+
 		return (
 			<div className="fit">
 				{box}
@@ -58,7 +78,7 @@ class ClassCards extends Component {
 	render() {
 		let classList = this.state.classes.map(function(classe, index){
 			return (
-				<ClassCard classe={classe} />
+				<ClassCard classe={classe} key={classe.name} />
 			)
 		});
 		return (

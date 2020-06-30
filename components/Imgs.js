@@ -32,9 +32,36 @@ class Imgs extends Component {
 
 		let imgList = imgs.map(function(src, index){    
 			let singleImg = !src.img2; //convert to bool
-			console.log(singleImg, src.img2);
+			//set up description with links
+			let desc = (
+				<div>
+					<br/>
+					<p>{src.desc}</p>
+					{src.link ? (
+						<p>
+							<Link href={`${src.link}`}>
+								<strong>
+									<a>View Site</a>
+								</strong>
+							</Link>
+							<br/>
+						</p>
+					) : null }
+					{src.ghLink ? (
+						<p>
+							<Link href={`${src.ghLink}`}>
+								<strong>
+									<a>View on Github</a>
+								</strong>
+							</Link>
+							<br/>
+						</p>
+					) : null }
+				</div>
+			);
+
+			//set up image
 			let image;    
-			let desc = <div><br/><p>{src.desc}</p></div>;
 			if(!singleImg) {
 				image = (     
 					<div>    
@@ -53,24 +80,44 @@ class Imgs extends Component {
 					</div>    
 				);    
 			}    
-			//set up the code vs text side pannel    
+
+			//set up the code or text side pannel    
 			let code;    
-			if(isCode)    
-				code = (<Lowlight language={lang} value={src.code} />);    
-			else code = (<p>{src.code}</p>);    
+			if(src.code) {
+				if(isCode)    
+					code = (<Lowlight language={lang} value={src.code} />);    
+				else code = (<p>{src.code}</p>);    
+			}
+
+			//set up sides of the demo
+			//if there is no code put description on oppoisite side of image
+			let side1 = (
+				<div className={"cell " + size + " holder"}>
+					{image}
+					{code ? (singleImg && desc) : null}
+				</div>
+			);
+			let side2 = (
+				<div className={"cell " + size + " holder"}>
+					{code ? (!singleImg && desc) : desc}
+					{code}
+				</div>
+			);
+
+			//set up alternating placeing of code and images
 			let place;    
 			if(left) { 
 				place = (
 					<div className="grid-x code">
-						<div className={"cell " + size + " holder"}>{image}{singleImg && desc}</div>
-						<div className={"cell " + size + " holder"}>{code}{!singleImg && desc}</div>
+						{side1}
+						{side2}
 					</div>
 				);
 			} else {
 				place = (
 					<div className="grid-x code">
-						<div className={"cell " + size + " holder"}>{image}{singleImg && desc}</div>
-						<div className={"cell " + size + " holder"}>{code}{!singleImg && desc}</div>
+						{side2}
+						{side1}
 					</div>
 				);
 			}
