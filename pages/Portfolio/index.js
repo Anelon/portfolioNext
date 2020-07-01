@@ -22,7 +22,7 @@ class Portfolio extends Component {
 			{
 				name:"Solar System - webgl, JavaScript", hasTaken:true,
 				link:"//anelon.github.io/SolarSystem",
-				ghLink:"//github.com/Anelon/SolarSystem/",
+				ghLink:"//github.com/Anelon/SolarSystem",
 				img:"/images/325images/solarSystem.png"
 			},
 			{
@@ -38,7 +38,7 @@ class Portfolio extends Component {
 			},
 			{
 				name:"Tic Tac Toe (AI) - React.js", hasTaken:true,
-				link:"//anelon.github.io/reactjs-ttt/",
+				link:"//anelon.github.io/reactjs-ttt",
 				ghLink:"//github.com/Anelon/reactjs-ttt",
 			},
 			/* need to figure out how to present or something
@@ -57,9 +57,9 @@ class Portfolio extends Component {
 			{name:"CST 363 - Database Management (MySQL)", hasTaken:true},
 			{name:"CST 311 - Intro to Computer Networking", hasTaken:true},
 			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:true},
-			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:false},
+			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:true},
 			{name:"CST 370 - Algorithms (C++)", hasTaken:false},
-			{name:"CST 438 - Software Engineering", hasTaken:false},
+			{name:"CST 438 - Software Engineering (Java)", hasTaken:false},
 			{name:"CST 499 - Directed Group Capstone", hasTaken:false},
 		];
 		//TODO make these classes

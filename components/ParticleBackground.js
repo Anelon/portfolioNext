@@ -390,8 +390,8 @@ class ParticleBackground extends Component {
 	}
 
 	componentDidMount() {
-		const width = document.getElementsByTagName("background")[0].clientWidth;
-		const height = document.getElementsByTagName("background")[0].clientHeight;
+		const width = document.getElementById("background").clientWidth;
+		const height = document.getElementById("background").clientHeight;
 		//update underlying canvas size
 		const canvas = document.getElementsByTagName("canvas")[0];
 		canvas.width = width;
@@ -456,9 +456,9 @@ class ParticleBackground extends Component {
 
 	render() {
 		return (
-			<background>
+			<div className="particleBackground" id="background">
 				<Canvas width={this.state.width} height={this.state.height} particles={this.state.particles} quadTree={this.state.quadTree} />
-			</background>
+			</div>
 		);
 	}
 }
@@ -528,6 +528,9 @@ class Canvas extends Component {
 				//draw line from partical to other particle using color
 				this.drawLine(particle.location, part.location, colorStr);
 			}
+		}
+		//probably no where near as efficient but looks better
+		for(let particle of particles) {
 			//might need to be it's own loop
 			particle.draw(this.ctx);
 		}

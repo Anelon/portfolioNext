@@ -25,33 +25,50 @@ class ClassCard extends Component {
 
 		let box;
 		if(this.state.available) {
-			//{/*render={(props) => <Class {...props} handler={this.handler} />}*/}
-			box = (
-				<Link href={link}>
-					<a>
-						<div className="Card small fit text-center">
-							{this.state.img ? (
-								<img className="CardImg" style={{maxHeight:150}} src={this.state.img} />
-							) : null }
+			//build with github link
+			if(this.state.ghLink) {
+				box = (
+					<div className="Card small fit text-center">
+						<Link href={link}>
+							<a>
+								{this.state.img ? (
+									<img className="CardImg" style={{maxHeight:150}} src={this.state.img} />
+								) : null }
 
-							<h4 className="text-center">{name}</h4>
+								<h4 className="text-center">{name}</h4>
+							</a>
+						</Link>
 
-							{this.state.ghLink ? (
-								<h5>
-									<strong>
-										<Link href={this.state.ghLink}>
-											<a>
-												View in Github
-											</a>
-										</Link>
-									</strong>
-								</h5>
-							) : null }
-						</div>
-					</a>
-				</Link>
-			);
+						<h5>
+							<strong>
+								<Link href={this.state.ghLink}>
+									<a>
+										View in Github
+									</a>
+								</Link>
+							</strong>
+						</h5>
+					</div>
+				);
+			} else {
+				//build with just link to view
+				box = (
+					<Link href={link}>
+						<a>
+							<div className="Card small fit text-center">
+								{this.state.img ? (
+									<img className="CardImg" style={{maxHeight:150}} src={this.state.img} />
+								) : null }
+
+								<h4 className="text-center">{name}</h4>
+
+							</div>
+						</a>
+					</Link>
+				);
+			}
 		} else {
+			//build without links
 			box = (
 				<div className="deadCard small fit">
 					<h4 className="text-center">{name}</h4>

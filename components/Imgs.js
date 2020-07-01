@@ -32,31 +32,41 @@ class Imgs extends Component {
 
 		let imgList = imgs.map(function(src, index){    
 			let singleImg = !src.img2; //convert to bool
+
+			let links;
+			if(src.link || src.ghLink) {
+				links = (
+					<p className="text-center">
+						{src.link ? (
+							<Link href={`${src.link}`}>
+								<a>
+									<strong>
+										View Site
+									</strong>
+								</a>
+							</Link>
+						) : null }
+
+						{src.link && src.ghLink ? <br/> : null}
+
+						{src.ghLink ? (
+							<Link href={`${src.ghLink}`}>
+								<a>
+									<strong>
+										Code on Github
+									</strong>
+								</a>
+							</Link>
+						) : null }
+					</p>
+				);
+			}
+
 			//set up description with links
 			let desc = (
 				<div>
-					<br/>
 					<p>{src.desc}</p>
-					{src.link ? (
-						<p>
-							<Link href={`${src.link}`}>
-								<strong>
-									<a>View Site</a>
-								</strong>
-							</Link>
-							<br/>
-						</p>
-					) : null }
-					{src.ghLink ? (
-						<p>
-							<Link href={`${src.ghLink}`}>
-								<strong>
-									<a>View on Github</a>
-								</strong>
-							</Link>
-							<br/>
-						</p>
-					) : null }
+					{links}
 				</div>
 			);
 
@@ -124,7 +134,7 @@ class Imgs extends Component {
 			left = !left;
 
 			return (
-				<div className="imageDiv">
+				<div className="imageDiv" key={src.title}>
 					<h2 className="text-center"><strong>{src.title}</strong></h2>
 					{place}
 				</div>
