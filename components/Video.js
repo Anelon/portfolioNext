@@ -51,7 +51,7 @@ class Videos extends Component {
       )
     });
     return (
-      <div class="grid-x grid-margin-x">
+      <div className="grid-x grid-margin-x">
         {vidList}
       </div>
     )

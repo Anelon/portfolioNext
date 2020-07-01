@@ -52,11 +52,13 @@ class CST336 extends Component {
 			<Layout location={this.state.title}>
 				<div className="fullScroll">
 					{/*<h1 className="text-center">{name}</h1>*/}
-					<p className="desc">{desc}</p>
-					{/* requires 2 items in */}
-					<p>
+					<p className="desc">
+					{desc}
+						<br/>
+						<br/>
 						This was a really fun class, having done a little bit of web development before I got to have fun and be creative.
 					</p>
+					{/* requires 2 items in */}
 					<Imgs imgs={websites} imgDir={this.state.imgDir} lang={"text"}/>
 				</div>
 			</Layout>

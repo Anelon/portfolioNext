@@ -43,7 +43,7 @@ class ClassCard extends Component {
 							<strong>
 								<Link href={this.state.ghLink}>
 									<a>
-										View in Github
+										View on Github
 									</a>
 								</Link>
 							</strong>

@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "fs": "0.0.1-security",
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^9.18.1",
     "next": "^9.4.4",
     "next-images": "^1.4.0",
     "path": "^0.12.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-lowlight": "^2.0.0",
-    "react-player": "^2.0.1"
+    "react-player": "^2.4.0"
   }
 }

@@ -5,13 +5,13 @@ import Tabs from '../../components/Tabs';
 import Videos from '../../components/Video';
 import Imgs from '../../components/Imgs';
 
-class CST370 extends Component {
+class CST325 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			title: "CST 370",
-			classDesc: "This class covers the data structures that are used in computer science in the C++ or Java  language. This class covers topics such as hash tables, stacks, heaps, trees, and graph structures. As well as sorting and searching algorithms and graph traversal. This class will help with understanding how data is stored efficiently in computers and how to use algorithms efficiently. Applying the knowledge from this course will help in creating optimized software. Algorithms are also used regularly in the hiring process for multiple companies to weed out the uninitiated. Proficiency developed in this course will be crucial to getting a foot in the door and landing a job.",
-			imgDir: "/images/370images/"
+			title: "CST 325",
+			classDesc: "This course covers the concepts of fundamental game programming. In this course, it covers GPU programming, matrix linear algebra for graphics programming. Quaternion algebra which would allow one to use physics to calculate the locations of the graphics when implementing the game. The gaming industry has seen incredible growth, overtaking all other media in some regions.  This course will help keep students competitive in the market. In the orientation, the course’s professor mentioned that the applications of this course go beyond gaming and have potential with AI and machine learning. AI is seeing increased use across a wide range of software applications, from predictions to photo-editing, making these skills especially useful in the current market.",
+			imgDir: "/images/325images/"
 		}
 	}
 	render() {
@@ -43,4 +43,4 @@ class CST370 extends Component {
 	}
 }
 
-export default CST370;
+export default CST325;

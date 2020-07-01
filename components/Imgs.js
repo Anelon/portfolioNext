@@ -1,27 +1,33 @@
 import { Component } from 'react';
 import Link from 'next/link';
 import Lowlight from 'react-lowlight';
-import python from 'highlight.js/lib/languages/python';
-import javascript from 'highlight.js/lib/languages/javascript'
-import java from 'highlight.js/lib/languages/java';
-import sql from 'highlight.js/lib/languages/sql';
-
-// Then register them with lowlight                                  
-Lowlight.registerLanguage('python', python);
-Lowlight.registerLanguage('javascript', javascript);
-Lowlight.registerLanguage('java', java);
-Lowlight.registerLanguage('mysql', sql);
 
 
 class Imgs extends Component {    
 	constructor(props) {    
 		super(props);    
+
+		if(this.props.lang !== "text") {
+			//register language
+			Lowlight.registerLanguage(this.props.lang, require('highlight.js/lib/languages/' + this.props.lang));
+		}
+
 		this.state = {    
 			imgs: this.props.imgs,    
 			imgDir: this.props.imgDir,
 			lang: this.props.lang,    
 		}    
 	}    
+
+	// update the outer class of code blocks
+	componentDidMount() {
+		const codeList = document.getElementsByTagName("code");
+		for(let elem of codeList) {
+			elem.classList.add("gruv");
+			elem.classList.remove("hljs");
+		}
+	}
+
 	render() {    
 		let lang = this.state.lang;    
 		let imgs = this.state.imgs;
@@ -95,7 +101,7 @@ class Imgs extends Component {
 			let code;    
 			if(src.code) {
 				if(isCode)    
-					code = (<Lowlight language={lang} value={src.code} />);    
+					code = (<Lowlight language={lang} value={src.code} prefix="gruv-"/>);    
 				else code = (<p>{src.code}</p>);    
 			}
 
@@ -140,6 +146,7 @@ class Imgs extends Component {
 				</div>
 			)
 		});
+
 		return (
 			<div>
 				<link

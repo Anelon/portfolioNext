@@ -1,0 +1,108 @@
+/*
+
+Gruvbox style (dark) (c) Pavel Pertsev (original style at https://github.com/morhetz/gruvbox)
+
+*/
+
+.gruv {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #282828;
+}
+
+.gruv,
+.gruv-subst {
+  color: #ebdbb2;
+}
+
+/* Gruvbox Red */
+.gruv-deletion,
+.gruv-formula,
+.gruv-keyword,
+.gruv-link,
+.gruv-selector-tag {
+  color: #fb4934;
+}
+
+/* Gruvbox Blue */
+.gruv-built_in,
+.gruv-emphasis,
+.gruv-name,
+.gruv-quote,
+.gruv-strong,
+.gruv-title,
+.gruv-variable {
+  color: #83a598;
+}
+
+/* Gruvbox Yellow */
+.gruv-attr,
+.gruv-params,
+.gruv-template-tag,
+.gruv-type {
+  color: #fabd2f;
+}
+
+/* Gruvbox Purple */
+.gruv-builtin-name,
+.gruv-doctag,
+.gruv-literal,
+.gruv-number {
+  color: #8f3f71;
+}
+
+/* Gruvbox Orange */
+.gruv-code,
+.gruv-meta,
+.gruv-regexp,
+.gruv-selector-id,
+.gruv-template-variable {
+  color: #fe8019;
+}
+
+/* Gruvbox Green */
+.gruv-addition,
+.gruv-meta-string,
+.gruv-section,
+.gruv-selector-attr,
+.gruv-selector-class,
+.gruv-string,
+.gruv-symbol {
+  color: #b8bb26;
+}
+
+/* Gruvbox Aqua */
+.gruv-attribute,
+.gruv-bullet,
+.gruv-class,
+.gruv-function,
+.gruv-function .gruv-keyword,
+.gruv-meta-keyword,
+.gruv-selector-pseudo,
+.gruv-tag {
+  color: #8ec07c;
+}
+
+/* Gruvbox Gray */
+.gruv-comment {
+  color: #928374;
+}
+
+/* Gruvbox Purple */
+.gruv-link_label,
+.gruv-literal,
+.gruv-number {
+  color: #d3869b;
+}
+
+.gruv-comment,
+.gruv-emphasis {
+  font-style: italic;
+}
+
+.gruv-section,
+.gruv-strong,
+.gruv-tag {
+  font-weight: bold;
+}

@@ -21,7 +21,7 @@ export default function Layout({ children, location }) {
 			</Link>
 		</>
 	);
-	if (location === "Portfolio") { //portfolio navbar
+	if (location === "Portfolio" || location[0] === "C") { //portfolio navbar
 		Navi = (
 			<>
 				<li><Link href="/Portfolio">
@@ -29,17 +29,6 @@ export default function Layout({ children, location }) {
 				</Link></li>
 				<li><Link href="/CSUMBPortfolio/CST336">
 					<a className={styles.NavLink}>Favorite Class</a>
-				</Link></li>
-			</>
-		);
-	} else if (location === "Andrew Bell ILP" || location[0] === "C") { //csumb portfolio navbar
-		Navi = (
-			<>
-				<li><Link href="/Portfolio">
-					<a className={styles.NavLink}>Home</a>
-				</Link></li>
-				<li><Link href="/CSUMBPortfolio/CST338">
-					<a className={styles.NavLink}>Recent Class</a>
 				</Link></li>
 			</>
 		);

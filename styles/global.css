@@ -17,6 +17,9 @@ p {
 	padding: 5px;
 }
 
+pre {-moz-tab-size: 4;} /* Firefox */
+pre {tab-size: 4;}
+
 .particleBackground {
 	position: absolute;
 	z-index: -1;

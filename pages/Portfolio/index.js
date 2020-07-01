@@ -58,7 +58,7 @@ class Portfolio extends Component {
 			{name:"CST 311 - Intro to Computer Networking", hasTaken:true},
 			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:true},
 			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:true},
-			{name:"CST 370 - Algorithms (C++)", hasTaken:false},
+			{name:"CST 370 - Algorithms (C++)", hasTaken:true},
 			{name:"CST 438 - Software Engineering (Java)", hasTaken:false},
 			{name:"CST 499 - Directed Group Capstone", hasTaken:false},
 		];

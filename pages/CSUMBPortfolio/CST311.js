@@ -19,6 +19,189 @@ class CST338 extends Component {
 		let imgDir = this.state.imgDir;
 		let assignments = [
 			{
+				title:"Chat Server",
+				code:`### server.py ###
+from socket import *
+import queue
+import sys
+from threading import Thread
+
+messages = queue.Queue(0) #infinit queue
+names = queue.Queue(2) #names for the clients
+#add 2 client names
+names.put('x');
+names.put('y');
+send = list() #messages to send
+threads = list() #make list of threads
+clients = list() #make list of clients
+# Create a TCP socket
+# Notice the use of SOCK_STREAM for TCP packets
+serverPort = 12000
+serverSocket = socket(AF_INET,SOCK_STREAM)
+# Assign IP address and port number to socket
+serverSocket.bind(('',serverPort))
+
+def die():
+    #close all of the connections
+    for client in clients:
+        print("close", client.name)
+        client.close()
+    clients.clear()
+    sys.exit()
+
+
+class Client:
+    def __init__(self, name, sock):
+        self.name = name
+        self.message = ""
+        self.sock = sock
+
+    def equals(self, other):
+        return self.name == other.name
+
+    def setMessage(self, mess):
+        self.message = mess
+
+    def getMessage(self):
+        try:
+            mess = self.sock.recv(1024).decode()
+        except:
+            die()
+
+        mess = self.name + ": " + mess
+        print(mess)
+        #store message for no reason
+        self.setMessage(mess)
+        #send message
+        for client in clients:
+            #if the client is not self
+            if not self.equals(client):
+                t = Thread(target=client.sendMessage, args=(mess,))
+                t.daemon = True
+                t.start()
+                threads.append(t)
+
+        if 'BYE' in mess.upper():
+            die()
+        else: 
+            #otherwise recusive
+            self.getMessage();
+
+    def sendMessage(self, message):
+        self.sock.send(message.encode())
+
+    def close(self):
+        self.sock.close()
+
+
+#start connections with the clients and make inital threads
+def Main():
+    serverSocket.listen(1)
+    print ('The server is ready to receive')
+    #get connections
+    while len(clients) < 2:
+        connectionSocket, addr = serverSocket.accept()
+        mess = connectionSocket.recv(1024).decode()
+        temp = Client(mess,connectionSocket)
+        clients.append(temp)
+
+    #recieve messages
+    for client in clients:
+        t = Thread(target=client.getMessage)
+        t.daemon = True
+        t.start()
+        threads.append(t)
+
+    #keep program open while threads are running
+    for thread in threads:
+        thread.join()
+
+    #end of program cleanup
+    for client in clients:
+        client.close()
+
+if __name__ == '__main__':
+    Main()
+
+
+
+### client.py ###
+# Note that the server must be present and running at 10.0.0.1.  To run on localhost,
+# make the appropriate change to serverName. This was tested in mininet as:
+# sudo mn --nat --topo single,3
+# This was also tested under localHost conditions to ensure communication.
+
+#Initiate socket creation protocol
+import threading
+from socket import *
+serverName = '10.0.0.1'
+serverPort = 12000
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.connect((serverName, serverPort))
+
+username = input('Input your username: ')
+clientSocket.sendto(username.encode(), (serverName, serverPort))
+
+
+def die():
+    #close all of the connections
+    for client in clients:
+        print("close", client.name)
+        client.close()
+    clients.clear()
+    sys.exit()
+
+#Thread 1 
+def send():
+	print ('Hi, ' + username +', ready to chat!')
+	print ('Type BYE and press enter to exit!')
+	print ('Type a message and press enter to send!')
+	print ()
+	while True:
+	#Message from user input, encode and send to server
+		message = input(username + ':')
+		print()
+		#print (username + ': ' + message) -may delete later
+		try:
+			clientSocket.sendto(message.encode(), (serverName, serverPort))
+		except:
+			die()
+		if message.upper() == 'BYE': 
+                        #Closes client if BYE sent
+			clientSocket.close()
+			print ('You have been signed out because you said BYE')
+			break
+
+#Thread 2		
+def recieve():
+	while True:
+		try:
+			modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+		except:
+			die()
+		print()
+		print(modifiedMessage.decode())
+                #Loads string from decoded message to see if it's BYE
+		logOutTest = modifiedMessage.decode()
+		if 'BYE' in logOutTest.upper(): 
+			#Closes client if BYE recieved
+			print ('You have been signed out because the other user said BYE')
+			clientSocket.close()
+			break
+
+
+def main():
+	sendThread = threading.Thread(target=send)
+	recieveThread = threading.Thread(target=recieve)
+	sendThread.start()
+	recieveThread.start()
+
+if __name__ == '__main__':
+    main()`,
+				img1:"chatServer.png",
+				desc:"For this project I wrote the server side code. This assignment was my first time really working with threads which was a little strange at first, but it ended up not being that hard. The main issue when working with threads was getting the threads to talk to eachother."
+			},
+			{
 				title:"UDP Pinger",
 				code:`### client.py ###
 

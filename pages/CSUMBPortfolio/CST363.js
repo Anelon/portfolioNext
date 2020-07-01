@@ -81,11 +81,11 @@ ORDER BY COUNT(*) DESC;`,
 					<Tabs>
 						<div label="MySQL Select">
 							<p>The select statement is a basic operation that when chained with the rest of the language can fetch complex tables with short querries.</p>
-							<Imgs imgs={select} imgDir={this.state.imgDir} lang={"MySQL"} />
+							<Imgs imgs={select} imgDir={this.state.imgDir} lang={"sql"} />
 						</div>
 						<div label="Joins">
 							<p>Joining tables is where MySQL really gets to show its power as it allows you to merge different tables based on a similar key.</p>
-							<Imgs imgs={join} imgDir={this.state.imgDir} lang={"MySQL"} />
+							<Imgs imgs={join} imgDir={this.state.imgDir} lang={"sql"} />
 						</div>
 					</Tabs>
 				</div>
