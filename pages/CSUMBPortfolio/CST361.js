@@ -29,7 +29,7 @@ class CST361 extends Component {
 					{/* requires 2 items in */}
 					<div label="Documentary">
 						<div>
-							{/* make link look better at somepoint */}
+							{/* make link look better at some point */}
 							<div class="grid-x grid-margin-x">
 								<div className="cell medium-12 text-center background">
 									<h2>Service Learning</h2>

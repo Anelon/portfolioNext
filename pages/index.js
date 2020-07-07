@@ -35,7 +35,7 @@ export default function Home() {
 						</div>
 						<div className="medium-5 cell">
 							<a href="/japan">
-								{/*<Link to="/Japan"> change back when galery is working*/}
+								{/*<Link to="/Japan"> change back when gallery is working*/}
 								<div className="Card small text-center">
 									<img src="/images/WaterTori.jpg" alt="Japan" className="CardImg"></img>
 									<br/>Japan Trips

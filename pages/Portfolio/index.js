@@ -47,7 +47,7 @@ class Portfolio extends Component {
 			},
 			*/
 ];
-		//TODO order classes by coolness/relavance
+		//TODO order classes by coolness/relevance
 		let classesCSUMB = [
 			//[Class Name, hasTaken]
 			{name:"CST 300 - Major Proseminar", hasTaken:true},
@@ -67,7 +67,7 @@ class Portfolio extends Component {
 			//[Class Name, hasTaken]
 			{name:"CSCI 40 - Programming Concepts (C++)", hasTaken:false},
 			{name:"CSCI 41 - Data Structures (C++)", hasTaken:false},
-			{name:"CSCI 26 - Descrete Math (C++)", hasTaken:false},
+			{name:"CSCI 26 - Discrete Math (C++)", hasTaken:false},
 			{name:"CSCI 45 - Assembly (Raspi, arm32, C, python)", hasTaken:false},
 			{name:"CSCI 150 - Software Engineering 1 (JavaScript)", hasTaken:false},
 			{name:"CSCI 152 - Software Engineering 2 (JavaScript, PHP, Python)", hasTaken:false},
@@ -81,7 +81,7 @@ class Portfolio extends Component {
 						</h2>
 						<p>
 							Bell lives in Fresno where he tutors computer science a Clovis Community College. He got into tech at a young age mostly playing video games with his older brothers. In more recent years, he enjoys playing video games, watching anime and rock climbing.<br/>
-							He is currently working on compleating his bachelors degree through CSUMB's online computer science degree completeion which at the end of he wishes to become a software engineer.
+							He is currently working on completing his bachelors degree through CSUMB's online computer science degree completion which at the end of he wishes to become a software engineer.
 							{/*need to add description of the program (outcomes), and your goals*/}
 						</p>
 						<div className="small text-center">
@@ -90,10 +90,10 @@ class Portfolio extends Component {
 					</div>
 					<div className="medium-6 cell">
 						<Tabs>
-							{/* Add highlight projets */}
+							{/* Add highlight projects */}
 							<div label="Projects">
 								<div className="small text-center">
-									<h2><strong>Hightlight Projects</strong></h2>
+									<h2><strong>Highlight Projects</strong></h2>
 								</div>
 								<ClassCards classes={highlightProjects}/>
 							</div>

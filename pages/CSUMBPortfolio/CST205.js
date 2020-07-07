@@ -19,7 +19,7 @@ class CST205 extends Component {
 		let midterm = [
 			{
 				title:"Cell Shading - Midterm", 
-				code:`#Cell Shadded
+				code:`#Cell Shaded
 def simpleCopy(mypic):
 		width = getWidth(mypic)
 		height = getHeight(mypic)
@@ -135,7 +135,7 @@ def celShaded():
 		return pic`,
 				img1:"cellShade.jpg",
 				img2:"cellShadePre.jpg",
-				desc:"This was a really cool project, after seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors were and then collor in those lines with simplified colors from the origional image."}
+				desc:"This was a really cool project, after seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors were and then color in those lines with simplified colors from the original image."}
 		];
 		let collages = [
 			{
@@ -219,7 +219,7 @@ def makeCard():
 	path = pickAFile() #Select a picture from desired directory
 	path = path[:path.rfind('\\')] + '\\'
 	print(path)
-	background = makePicture(path + "cloverbackground.jpg") #clover (width =1000, height = 1400 , 5x7)
+	background = makePicture(path + "cloverBackground.jpg") #clover (width =1000, height = 1400 , 5x7)
 	leprechaun = makePicture(path + "leprechaun.jpg")
 	csumb = makePicture(path + "csumblogo.jpg")
 	bottom = getHeight(background)
@@ -280,7 +280,7 @@ def chromakey():
 	repaint(newPic)
 	return newPic`,
 				img1:"chromaKey.png",
-				desc:"Making a chroma key filter was not that difficult, the hardest part as with most of these assignments was figuring out which pictures to go with. But when my team found the Obama interview image someone sugested him interviewing a Trex which picture was then found and so we put them in an interview background. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."
+				desc:"Making a chroma key filter was not that difficult, the hardest part as with most of these assignments was figuring out which pictures to go with. But when my team found the Obama interview image someone suggested him interviewing a Trex which picture was then found and so we put them in an interview background. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."
 			},
 		];
 		let color = [
@@ -311,7 +311,7 @@ def chromakey():
 	show(pic)`,
 				img1:"artify.jpg",
 				img2:"artifyPre.jpg",
-				desc:"This was a cool filter to do as I personally like the cell shadded look and simplifying the colors is one step closer to getting to that goal."
+				desc:"This was a cool filter to do as I personally like the cell shaded look and simplifying the colors is one step closer to getting to that goal."
 			},
 			{
 				title:"Better Black and White", 
@@ -328,7 +328,7 @@ def chromakey():
 	repaint(pic)`,
 				img1:"bnw.jpg",
 				img2:"bnwPre.jpg",
-				desc:"Better black and white was interesting to learn how each color actually effects the precieved brightness of an image. One issue I had with this filter was accidentally dividing the average calculation by 3 leaving the image much darker than intended."
+				desc:"Better black and white was interesting to learn how each color actually effects the perceived brightness of an image. One issue I had with this filter was accidentally dividing the average calculation by 3 leaving the image much darker than intended."
 			},
 			{
 				title:"Negative", 
@@ -409,7 +409,7 @@ def lineDraw(pic):
 	return pic`,
 				img1:"line.jpg",
 				img2:"linePre.jpg",
-				desc:"I liked how this one looked almost hand drawn image and it was really cool to see how it changed an image. I ran this filter with the prelining as a simplified version of the Artify function. Results of this testing may be seen later. Figuring out how much was echough of a tolerance in attempts of drawing lines but not too many of to little I ended at 35, which was just because it looked good."
+				desc:"I liked how this one looked almost hand drawn image and it was really cool to see how it changed an image. I ran this filter with the pre-lining setup as a simplified version of the Artify function. Results of this testing may be seen later. Figuring out how much was enough of a tolerance in attempts of drawing lines but not too many of to little I ended at 35, which was just because it looked good."
 			},
 			{
 				title:"Top-to-bottom mirror", 
@@ -449,7 +449,7 @@ def lineDraw(pic):
 	return pic`,
 				img1:"redEye.png",
 				img2:"preRedEye.png",
-				desc:"Durring this assignment I truly realized how many reds there were and how close people's faces are to red colored making it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and its one of the most short and sweet filters on this list."
+				desc:"During this assignment I truly realized how many reds there were and how close people's faces are to red colored making it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and its one of the most short and sweet filters on this list."
 			},
 		];
 
@@ -466,12 +466,12 @@ def lineDraw(pic):
 					<Tabs>
 						<div label="Major Projects">
 							<div>
-								{/* make link look better at somepoint */}
+								{/* make link look better at some point */}
 								<h2 className="text-center">Robot Saga - Final</h2>
 								<div className="grid-x grid-margin-x">
 									<div className="cell medium-6 large-6" >
 										<p>
-											This was a really fun final project as we started working on this project around the time of the midterm for the class we put a lot of work into this game and I feel like that really shows as we pushed the IDE JES to its limits. The thing that I worked mostly on as mentioned in the video is the tile generation and general map tile system implemeting strings that could be modified and then running JES, using it as intended one of the few times in this project. 
+											This was a really fun final project as we started working on this project around the time of the midterm for the class we put a lot of work into this game and I feel like that really shows as we pushed the IDE JES to its limits. The thing that I worked mostly on as mentioned in the video is the tile generation and general map tile system implementing strings that could be modified and then running JES, using it as intended one of the few times in this project. 
 										</p>
 										{/* github is private right now
 										<a href="https://github.com/DuskEcho/CST205Final" className="codeLink">Code in Github</a>

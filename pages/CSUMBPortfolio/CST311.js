@@ -10,7 +10,7 @@ class CST338 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 311",
-			classDesc: "This course is described as a “Survey” course on internetworking protocol, security, and industry trends.  As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
+			classDesc: "This course is described as a “Survey” course on inter-networking protocol, security, and industry trends.  As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
 			imgDir: "/images/311images/"
 		}
 	}
@@ -26,7 +26,7 @@ import queue
 import sys
 from threading import Thread
 
-messages = queue.Queue(0) #infinit queue
+messages = queue.Queue(0) #infinite queue
 names = queue.Queue(2) #names for the clients
 #add 2 client names
 names.put('x');
@@ -84,7 +84,7 @@ class Client:
         if 'BYE' in mess.upper():
             die()
         else: 
-            #otherwise recusive
+            #otherwise recursive
             self.getMessage();
 
     def sendMessage(self, message):
@@ -94,7 +94,7 @@ class Client:
         self.sock.close()
 
 
-#start connections with the clients and make inital threads
+#start connections with the clients and make initial threads
 def Main():
     serverSocket.listen(1)
     print ('The server is ready to receive')
@@ -105,7 +105,7 @@ def Main():
         temp = Client(mess,connectionSocket)
         clients.append(temp)
 
-    #recieve messages
+    #receive messages
     for client in clients:
         t = Thread(target=client.getMessage)
         t.daemon = True
@@ -184,7 +184,7 @@ def recieve():
                 #Loads string from decoded message to see if it's BYE
 		logOutTest = modifiedMessage.decode()
 		if 'BYE' in logOutTest.upper(): 
-			#Closes client if BYE recieved
+			#Closes client if BYE received
 			print ('You have been signed out because the other user said BYE')
 			clientSocket.close()
 			break
@@ -199,7 +199,7 @@ def main():
 if __name__ == '__main__':
     main()`,
 				img1:"chatServer.png",
-				desc:"For this project I wrote the server side code. This assignment was my first time really working with threads which was a little strange at first, but it ended up not being that hard. The main issue when working with threads was getting the threads to talk to eachother."
+				desc:"For this project I wrote the server side code. This assignment was my first time really working with threads which was a little strange at first, but it ended up not being that hard. The main issue when working with threads was getting the threads to talk to each other."
 			},
 			{
 				title:"UDP Pinger",
@@ -293,7 +293,7 @@ while sequence_number < 11:
     print("Packets: Sent =", sequence_number, "Received =", sequence_number - lostPackages, "Lost = ", lostPackages, "(", percentage, "loss),")
     sequence_number +=1
 
-sequence_number -= 1 #fix off by one in avg calcuation
+sequence_number -= 1 #fix off by one in avg calculation
 #( Your client software will need to determine and print out the minimum, maximum, and average RTTs at the end of all pings from the client along with printing out the number of packets lost and the packet loss rate (in percentage).  Then compute and print what should be the timeout period based on the RTT results. )
 recieved = sequence_number - lostPackages
 avgRTT = total/recieved
@@ -327,7 +327,7 @@ while True:
     # Otherwise, the server responds
     serverSocket.sendto(message, address)`,
 				img1:"udpPinger.png",
-				desc:"In this project I was the team leader which means I was in charge of coordinating who does which part of the assignement and write up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time."
+				desc:"In this project I was the team leader which means I was in charge of coordinating who does which part of the assignment and write up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time."
 			},
 		];
 

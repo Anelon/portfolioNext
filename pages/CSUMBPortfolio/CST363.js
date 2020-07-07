@@ -26,7 +26,7 @@ WHERE payment_date IS NULL;
 `,
 			
 				img1:"selectNull.png",
-				desc:"I found this really useful as a way of selecting events that havent happended yet. This usecase is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
+				desc:"I found this really useful as a way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
 			},
 			{
 				title:"Concat, Order By",
@@ -36,7 +36,7 @@ WHERE vendor_contact_last_name REGEXP '^[A-C]|^[E]'
 ORDER BY vendor_contact_last_name, vendor_contact_first_name;`,
 			
 				img1:"concatOrder.png",
-				desc:"I found this really useful as a way of selecting events that havent happended yet. This usecase is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
+				desc:"I found this really useful as a way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
 			},
 			{
 				title:"Select Date",
@@ -57,7 +57,7 @@ JOIN invoice_line_items li
 ORDER BY v.vendor_name, i.invoice_date, i.invoice_number, li.invoice_sequence;`,
 			
 				img1:"joinThree.png",
-				desc:"Joining different tables means that you can keep data seperated, this is one of the key advantages of MySQL over a NoSQL solution.",
+				desc:"Joining different tables means that you can keep data separated, this is one of the key advantages of MySQL over a NoSQL solution.",
 			},
 			{
 				title:"Group By",
@@ -68,7 +68,7 @@ GROUP BY v.vendor_name
 ORDER BY COUNT(*) DESC;`,
 			
 				img1:"groupBy.png",
-				desc:"Group By can take data that is spread out from multiple rows with a common column, such as vendor name in the example, and count the occurances, you can also sum if it is a number or you could find the max or min.",
+				desc:"Group By can take data that is spread out from multiple rows with a common column, such as vendor name in the example, and count the occurrences, you can also sum if it is a number or you could find the max or min.",
 			},
 		];
 
@@ -80,7 +80,7 @@ ORDER BY COUNT(*) DESC;`,
 					{/* requires 2 items in */}
 					<Tabs>
 						<div label="MySQL Select">
-							<p>The select statement is a basic operation that when chained with the rest of the language can fetch complex tables with short querries.</p>
+							<p>The select statement is a basic operation that when chained with the rest of the language can fetch complex tables with short queries.</p>
 							<Imgs imgs={select} imgDir={this.state.imgDir} lang={"sql"} />
 						</div>
 						<div label="Joins">

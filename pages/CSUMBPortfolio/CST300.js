@@ -29,8 +29,8 @@ class CST300 extends Component {
 						<div label="Human Augmentation (Final Video)">
 							<Videos videos={videos}/>
 						</div>
-						<div label="Tourism WebDev (Industy Analysis)">
-							{/*<h2 className="text-center">Industy Analysis Paper</h2>*/}
+						<div label="Tourism WebDev (Industry Analysis)">
+							{/*<h2 className="text-center">Industry Analysis Paper</h2>*/}
 							<iframe className="paper" title="Industry Analysis" src="https://docs.google.com/document/d/e/2PACX-1vTBsOkz2iZCbXj2SLgNI6kWct4NFvAOe3X5qNcbxJKpxh0EwaKIEdcrGqMLUwO6R5WFNpO_739i1Z30/pub?embedded=true"></iframe>
 						</div>
 						<div label="Right to Repair (Ethics Paper)">

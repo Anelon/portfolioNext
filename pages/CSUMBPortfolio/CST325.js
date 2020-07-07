@@ -34,7 +34,7 @@ class CST325 extends Component {
 					<p className="desc">{desc}</p>
 					{/* requires 2 items in */}
 					<p>
-						Being someone that is intereted in game development I found this class really cool to see how you make 3d environments. It was also really interesting to see how you can interact with the GPU, sense taking this class I have learned about compute shaders which is using the GPU for calculations.
+						Being someone that is interested in game development I found this class really cool to see how you make 3d environments. It was also really interesting to see how you can interact with the GPU, sense taking this class I have learned about compute shaders which is using the GPU for calculations.
 					</p>
 					<Imgs imgs={projects} imgDir={this.state.imgDir} lang={"text"}/>
 				</div>

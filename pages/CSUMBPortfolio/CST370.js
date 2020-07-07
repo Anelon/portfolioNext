@@ -114,8 +114,8 @@ int main() {
 				desc:"Time math again not being my strong suit. I made a TimeStamp class which I wanted to use operator overloading in C++ to make it so that you can add and subtract times with simple operations, as well as read and print Time Stamps.",
 			},
 			{
-				title:"Recursive Palendrome",
-				img1:"palendrome.png",
+				title:"Recursive Palindrome",
+				img1:"palindrome.png",
 				code:`#include <iostream>
 #include <vector>
 using namespace std;
@@ -129,11 +129,11 @@ string cleanString(string s) {
 	return retStr;
 }
 
-bool palendrome(string s, size_t index) {
+bool palindrome(string s, size_t index) {
 	//cout << index << endl;
 	if(index >= s.size() / 2) return true;
 	if(s.at(index) == s.at(s.size()-1 - index)) {
-		return palendrome(s, ++index);
+		return palindrome(s, ++index);
 	} else {
 		return false;
 	}
@@ -145,13 +145,13 @@ int main() {
 	getline(cin, str);
 	str = cleanString(str);
 	//cout << str << endl;
-	if(palendrome(str, 0)) {
+	if(palindrome(str, 0)) {
 		cout << "TRUE" << endl;
 	} else {
 		cout << "FALSE" << endl;
 	}
 }`,
-				desc:"Checking for a palendrome recursively was interesting as checking for a palendrome is a common interview question. I have also in the past implemented it nonrecursively a few times using either itterating accross the string or reversing and checking if it is the same as the reversed version.",
+				desc:"Checking for a palindrome recursively was interesting as checking for a palindrome is a common interview question. I have also in the past implemented it non-recursively a few times using either iterating across the string or reversing and checking if it is the same as the reversed version.",
 			},
 			{
 				title:"2d Coin Path",
@@ -197,7 +197,7 @@ class Matx {
 			this->height = height;
 			this->mat = vector<int>(width * height);
 		}
-		//x, y retruns index
+		//x, y returns index
 		inline int index(int i, int j) const {
 			return i + j * width;
 		}
@@ -207,7 +207,7 @@ class Matx {
 		Path collectCoins() const {
 			Matx count(width, height);
 			vector<Coords> path;
-			//forward itterate
+			//forward iterate
 			for(int j = 0; j < height; j++) {
 				bool blocked = false;
 				for(int i = 0; i < width; i++) {
@@ -337,7 +337,7 @@ class Matx {
 			Matx floyds = *this;
 			for(int d = 0; d < floyds.size; d++) {
 				for(int i = 0; i < floyds.size; i++) {
-					//dont look at current?
+					//don't look at current?
 					//if(i == d) continue;
 					//skip if infinit
 					if(floyds.mat.at(index(i,d)) == INFINIT) continue;
@@ -399,7 +399,7 @@ int main() {
 
 	cout << matrix.floyds();
 }`,
-				desc:"Finding the minimum path is very common problem, especially in mapping and pathing aplications. Being able to find the shortest path in a graph quickly and efficiently is important when writing these applications.",
+				desc:"Finding the minimum path is very common problem, especially in mapping and pathing applications. Being able to find the shortest path in a graph quickly and efficiently is important when writing these applications.",
 			},
 		];
 
