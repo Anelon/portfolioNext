@@ -80,8 +80,9 @@ class Portfolio extends Component {
 							<strong>Hello, my name is Andrew Bell</strong><br/>
 						</h2>
 						<p>
-							Bell lives in Fresno where he tutors computer science a Clovis Community College. He got into tech at a young age mostly playing video games with his older brothers. In more recent years, he enjoys playing video games, watching anime and rock climbing.<br/>
-							He is currently working on completing his bachelors degree through CSUMB's online computer science degree completion which at the end of he wishes to become a software engineer.
+							Here you can see a few of my favorite projects highlighted, these are all bigger projects that were fun to make and show off my skill. If you want to see which classes I have taken at CSUMB for my Bachelors those are available as well as my lower division classes.<br/><br/>
+							I am currently working on the last class for my Bachelor's Degree in Computer Science through CSUMB's online program. When my degree is completed I wish to use it to become a software engineer.<br/><br/>
+I live in Fresno where I have been tutoring computer science at Clovis Community College. I got into tech at a young age through playing video games with my older brothers. In more recent years, I still love video games but I also enjoy watching anime and rock climbing.
 							{/*need to add description of the program (outcomes), and your goals*/}
 						</p>
 						<div className="small text-center">

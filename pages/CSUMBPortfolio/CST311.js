@@ -10,7 +10,7 @@ class CST338 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 311",
-			classDesc: "This course is described as a “Survey” course on inter-networking protocol, security, and industry trends.  As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
+			classDesc: "This course was described as a “Survey” course on inter-networking protocol, security, and industry trends. As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
 			imgDir: "/images/311images/"
 		}
 	}
@@ -199,7 +199,7 @@ def main():
 if __name__ == '__main__':
     main()`,
 				img1:"chatServer.png",
-				desc:"For this project I wrote the server side code. This assignment was my first time really working with threads which was a little strange at first, but it ended up not being that hard. The main issue when working with threads was getting the threads to talk to each other."
+				desc:"For this project I wrote the server side code. This assignment was my first time working with threads which was a little strange at first, but it ended up not being that hard. The main issue when working with threads was getting the threads to talk to each other."
 			},
 			{
 				title:"UDP Pinger",
@@ -327,7 +327,7 @@ while True:
     # Otherwise, the server responds
     serverSocket.sendto(message, address)`,
 				img1:"udpPinger.png",
-				desc:"In this project I was the team leader which means I was in charge of coordinating who does which part of the assignment and write up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time."
+				desc:"In this project I was the team leader in charge of coordinating who does which part of the assignment and writing up the documentation. This is a client that sends a ping message to a UDP server which simulates dropped packages. It then calculates Sample RTT, Estimated RTT, the Timeout Interval, and uses that to calculate the minimum, max and average round trip time."
 			},
 		];
 

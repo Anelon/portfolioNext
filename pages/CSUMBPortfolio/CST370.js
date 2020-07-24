@@ -10,7 +10,7 @@ class CST370 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 370",
-			classDesc: "This class covers the data structures that are used in computer science in the C++ or Java  language. This class covers topics such as hash tables, stacks, heaps, trees, and graph structures. As well as sorting and searching algorithms and graph traversal. This class will help with understanding how data is stored efficiently in computers and how to use algorithms efficiently. Applying the knowledge from this course will help in creating optimized software. Algorithms are also used regularly in the hiring process for multiple companies to weed out the uninitiated. Proficiency developed in this course will be crucial to getting a foot in the door and landing a job.",
+			classDesc: "This class investigates the data structures that are used in computer science in the C++ or Java language. This class covers topics such as hash tables, stacks, heaps, trees, and graph structures, as well as sorting and searching algorithms and graph traversal. Applying the knowledge from this course will help in creating optimized software. Algorithms are also used regularly in the hiring process for multiple companies to weed out the uninitiated. Proficiency developed in this course will be crucial to getting a foot in the door and landing a job.",
 			imgDir: "/images/370images/"
 		}
 	}
@@ -111,7 +111,7 @@ int main() {
 	//cout << time2 << endl;
 	cout << (time2 - time1) << endl;
 }`,
-				desc:"Time math again not being my strong suit. I made a TimeStamp class which I wanted to use operator overloading in C++ to make it so that you can add and subtract times with simple operations, as well as read and print Time Stamps.",
+				desc:"I made a TimeStamp class which I wanted to use operator overloading in C++ to make it so that you can add and subtract times with simple operations, as well as read and print TimeStamps.",
 			},
 			{
 				title:"Recursive Palindrome",
@@ -151,7 +151,7 @@ int main() {
 		cout << "FALSE" << endl;
 	}
 }`,
-				desc:"Checking for a palindrome recursively was interesting as checking for a palindrome is a common interview question. I have also in the past implemented it non-recursively a few times using either iterating across the string or reversing and checking if it is the same as the reversed version.",
+				desc:"Checking for a palindrome recursively was interesting as checking for a palindrome is a common interview question. I have also implemented it non-recursively a few times using either iterating across the string or reversing and checking if it is the same as the reversed version.",
 			},
 			{
 				title:"2d Coin Path",
@@ -302,7 +302,7 @@ int main() {
 	pathStr.pop_back();
 	cout << "Path:" << pathStr << endl;
 }`,
-				desc:"This was a fun assignment which is to figure out what the best path for you to traverse to pick up the most coins while only moving down or right.",
+				desc:"This assignment was to figure out what the best path would be for you to traverse to pick up the most coins while only moving down or right.",
 			},
 			{
 				title:"Floyd's Minimum Path",
@@ -399,7 +399,7 @@ int main() {
 
 	cout << matrix.floyds();
 }`,
-				desc:"Finding the minimum path is very common problem, especially in mapping and pathing applications. Being able to find the shortest path in a graph quickly and efficiently is important when writing these applications.",
+				desc:"Finding the minimum path is a very common problem, especially in mapping and pathing applications. Being able to find the shortest path in a graph quickly and efficiently is important when writing these applications.",
 			},
 		];
 
@@ -411,7 +411,7 @@ int main() {
 						{desc}
 						<br/>
 						<br/>
-						This class was really a showcase of the algorithms library in C++ I had fun seeing how you can solve problems with the standard library functions, and even implementing a few of them on my own sometimes.
+						I had fun seeing how you can solve problems with the standard library functions, and even implementing a few of them on my own sometimes.
 					</p>
 					{/* tabs requires 2 items in */}
 					<Imgs imgs={projects} imgDir={this.state.imgDir} lang={"cpp"}/>

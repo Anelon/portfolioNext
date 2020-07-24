@@ -10,7 +10,7 @@ class CST205 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 205",
-			classDesc: "This class is an introduction to the python language. Covering different python functions, data types and expressions in python. The core of this class to give students a conceptual understanding of digital media concepts and formats and manipulating digital media with the python language. Due to the high level, cross-platform nature of the language, it will be beneficial in rapidly creating and deploying software across multiple platforms. In the professional world, this means reaching a wide audience, which translates to increased profits in most cases.",
+			classDesc: "This class was an introduction to the Python language by covering different Python functions, data types and expressions in Python. The goal of this class was to give students a conceptual understanding of digital media concepts and formats and how to manipulate digital media with the Python language. Due to the high level, cross-platform nature of the language, it is beneficial in rapidly creating and deploying software across multiple platforms.",
 			imgDir: "/images/205images/"
 		}
 	}
@@ -135,7 +135,7 @@ def celShaded():
 		return pic`,
 				img1:"cellShade.jpg",
 				img2:"cellShadePre.jpg",
-				desc:"This was a really cool project, after seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors were and then color in those lines with simplified colors from the original image."}
+				desc:"After seeing the line draw function I was wondering if I could create a cell shaded inspired filter. The idea was to use a mix of the artify function and the line draw filter to create lines based on where the biggest change in colors occurred. Then I would color in those lines with more simplified colors from the original image."}
 		];
 		let collages = [
 			{
@@ -197,7 +197,7 @@ def celShaded():
 	writePictureTo(pic, path + "Out.jpg")
 	return pic`,
 				img1:"collage.jpg",
-				desc:"This was a fun project to make as it was fun to put a few of the pictures I had taken across my trips to Japan together. The hard part of this assignment was finding which filters to put on pictures that would make them look better."},
+				desc:"For this project it was fun to put a few of the pictures I had taken across my trips to Japan together. The hard part of this assignment was finding which filters to put on the pictures to make them look better."},
 			{
 				title:"St. Patrick's Day Card", 
 				code:`def whiteCopy(src, target, targetX, targetY):
@@ -250,7 +250,7 @@ def placeShadowText(text, pic, posx, posy):
 	addTextWithStyle(pic, posx-5, posy-2, text, style, color)
 	#repaint(pic)`,
 				img1:"card.jpg", 
-				desc:"For this collage we were tasked with making a card for St. Patrick's Day which. To make this we modified our green screen code to work with white backgrounds. The problem was the first attempt there was not the drop shadow on the text so it didn't contrast much with the background so I added a placeShadowText function to make placing a shadow on the text easier."},
+				desc:"For this collage we were tasked with making a card for St. Patrick's Day. We modified our green screen code to work with white backgrounds. In the first attempt there was not the drop shadow on the text so it didn't contrast much with the background. To fix this I added a placeShadowText function to make placing a shadow on the text easier."},
 			{
 				title:"Green Screen", 
 				code:`def greenCopy(src, target, targetX, targetY):
@@ -280,93 +280,8 @@ def chromakey():
 	repaint(newPic)
 	return newPic`,
 				img1:"chromaKey.png",
-				desc:"Making a chroma key filter was not that difficult, the hardest part as with most of these assignments was figuring out which pictures to go with. But when my team found the Obama interview image someone suggested him interviewing a Trex which picture was then found and so we put them in an interview background. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."
+				desc:"Making a chroma key filter was not that difficult; the hardest part was figuring out which pictures to use. But when my team found the Obama interview image someone suggested he interview a T-rex so we put them in an interview background together. Getting the right color of green to be selected was probably the most difficult part of this assignment but with some fiddling we quickly eliminated the green."
 			},
-		];
-		let color = [
-			{
-				title:"Artify", 
-				code:`def artify():
-	file = pickAFile()
-	pic = makePicture(file)
-	for p in getPixels(pic):
-		r = getRed(p)
-		b = getBlue(p)
-		g = getGreen(p)
-
-		if(r < 64): setRed(p, 31)
-		elif(r>63 and r<128): setRed(p, 95)
-		elif(r>127 and r < 192): setRed(p, 159)
-		else: setRed(p, 223)
-
-		if(g < 64): setGreen(p, 31)
-		elif(g>63 and g<128): setGreen(p, 95)
-		elif(g>127 and g < 192): setGreen(p, 159)
-		else: setGreen(p, 223)
-
-		if(b < 64): setBlue(p, 31)
-		elif(b>63 and b<128): setBlue(p, 95)
-		elif(b>127 and b < 192): setBlue(p, 159)
-		else: setBlue(p, 223)
-	show(pic)`,
-				img1:"artify.jpg",
-				img2:"artifyPre.jpg",
-				desc:"This was a cool filter to do as I personally like the cell shaded look and simplifying the colors is one step closer to getting to that goal."
-			},
-			{
-				title:"Better Black and White", 
-				code:`def betterBnW():
-	pic = get_pic()
-	pixels = getPixels(pic)
-	for px in getPixels(pic):
-		r = getRed(px)
-		g = getGreen(px)
-		b = getBlue(px)
-		avg = (r*0.299 + g*0.587 + b*0.114)
-		luminanceColors = makeColor(avg,avg,avg)
-		setColor(px, luminanceColors)
-	repaint(pic)`,
-				img1:"bnw.jpg",
-				img2:"bnwPre.jpg",
-				desc:"Better black and white was interesting to learn how each color actually effects the perceived brightness of an image. One issue I had with this filter was accidentally dividing the average calculation by 3 leaving the image much darker than intended."
-			},
-			{
-				title:"Negative", 
-				code:`def makeNegative(pic):
-	pixels = getPixels(pic)
-	for p in pixels:
-		r = 255 - getRed(p)
-		b = 255 - getBlue(p)
-		g = 255 - getGreen(p)
-		setRed(p, r)
-		setGreen(p, g)
-		setBlue(p, b)
-	repaint(pic)`,
-				img1:"negative.jpg",
-				img2:"negativePre.jpg",
-				desc:"Negative is a very generic filter that I feel almost never looks good but is always fun to see what the inverted colors looks like."
-			},
-			{
-				title:"Rose-colored Glasses", 
-				code:`def roseColoredGlasses(pic):
-	pixels = getPixels(pic)
-	for p in pixels:
-		#Boost Red lower others
-		r = getRed(p) + 50
-		b = getBlue(p) - 50
-		g = getGreen(p) - 50
-		#Prevent Overflow/Underflow
-		if r > 255: r = 255
-		if b < 0: b = 0
-		if g < 0: g = 0
-		setRed(p, r)
-		setGreen(p, g)
-		setBlue(p, b)
-	repaint(pic)`,
-				img1:"rose.jpg", 
-				img2:"rosePre.jpg",
-				desc:"Viewing the world through rose colored glasses is a saying that doesn't really make much sense to me but the filter was probably one of the weirdest to write, at first we tried to write the filter by multiplying values but that was not really working so I adjusted it to be a flat addition and subtraction to the values giving more of the red look."
-			}
 		];
 		let pixel = [
 			{
@@ -409,7 +324,7 @@ def lineDraw(pic):
 	return pic`,
 				img1:"line.jpg",
 				img2:"linePre.jpg",
-				desc:"I liked how this one looked almost hand drawn image and it was really cool to see how it changed an image. I ran this filter with the pre-lining setup as a simplified version of the Artify function. Results of this testing may be seen later. Figuring out how much was enough of a tolerance in attempts of drawing lines but not too many of to little I ended at 35, which was just because it looked good."
+				desc:"I liked how this project looked almost hand drawn and it was really cool to see how it changed the image. I ran this filter with the pre-lining setup as a simplified version of the Artify function. The results of this testing can be seen later."
 			},
 			{
 				title:"Top-to-bottom mirror", 
@@ -422,23 +337,7 @@ def lineDraw(pic):
 				img1:"mirror.jpg",
 				img2:"mirrorPre.jpg",
 			
-				desc:"Mirroring and image is very simple, the hard part is figuring out which part of the image you are grabbing from and where you are putting it to."
-			},
-			{
-				title:"Shrink", 
-				code:`def shrink(mypic):
-	width = int(getWidth(mypic)/2)
-	height = int(getHeight(mypic)/2)
-	pic = makeEmptyPicture(width, height)
-	for x in range (0, width):
-		for y in range (0, height):
-			 setColor(getPixel(pic, x, y), getColor(getPixel(mypic, x*2, y*2)))
-	show(pic)
-	writePictureTo(pic, path + "shrink.jpg")
-	return pic`,
-				img1:"shrink.jpg",
-				img2:"shrinkPre.jpg",
-				desc:"Shrink was another one of the easier ones to write as you simply grab every other pixel, it would have been interesting to try and average every 4 pixels into one, another thing that might be fun to try later would be to upscale images as that require more blending of one side to another."
+				desc:"Mirroring an image is simple; the hard part is figuring out which section of the image you are grabbing from and where you are putting it."
 			},
 			{
 				title:"Red-eye Reduction", 
@@ -449,7 +348,7 @@ def lineDraw(pic):
 	return pic`,
 				img1:"redEye.png",
 				img2:"preRedEye.png",
-				desc:"During this assignment I truly realized how many reds there were and how close people's faces are to red colored making it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and its one of the most short and sweet filters on this list."
+				desc:"During this assignment I truly realized how many reds there were and how close people's faces are to red colors which made it very hard to isolate the right red color. This filter will not work on a lot of images but it worked really well on the one that we used and it's one of the most short and sweet filters on this list."
 			},
 		];
 
@@ -471,7 +370,7 @@ def lineDraw(pic):
 								<div className="grid-x grid-margin-x">
 									<div className="cell medium-6 large-6" >
 										<p>
-											This was a really fun final project as we started working on this project around the time of the midterm for the class we put a lot of work into this game and I feel like that really shows as we pushed the IDE JES to its limits. The thing that I worked mostly on as mentioned in the video is the tile generation and general map tile system implementing strings that could be modified and then running JES, using it as intended one of the few times in this project. 
+											We started working on this project around the time of the midterm for the class. We put a lot of work into this game and I feel like that really shows as we pushed the IDE JES to its limits. The thing that I worked on the most, as mentioned in the video, is the tile generation and general map tile system, implementing strings that could be modified and then running JES.
 										</p>
 										{/* github is private right now
 										<a href="https://github.com/DuskEcho/CST205Final" className="codeLink">Code in Github</a>
@@ -488,9 +387,6 @@ def lineDraw(pic):
 						</div>
 						<div label="Collages">
 							<Imgs imgs={collages} imgDir={this.state.imgDir} lang={"python"}/>
-						</div>
-						<div label="Color Manipulation">
-							<Imgs imgs={color} imgDir={this.state.imgDir} lang={"python"}/>
 						</div>
 						<div label="Pixel Manipulation">
 							<Imgs imgs={pixel} imgDir={this.state.imgDir} lang={"python"}/>

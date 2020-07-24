@@ -10,7 +10,7 @@ class CST363 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 363",
-			classDesc: "This class focuses on Database Management and interaction.  Databases are used in most applications in some form and are an important type of external storage that allows for data changes in a program without needing to recompile. Databases used individually are a useful statistic and tracking tool as well as an efficient means of storing program related data.  Most languages have some ability to directly work with databases. The SQL language specifically is important as it is used broadly across multiple industries.",
+			classDesc: "This class focused on Database Management and interaction. Databases are used in most applications and are an important type of external storage that allows for data changes in a program without needing to recompile. Databases used individually are a useful statistic and tracking tool as well as an efficient means of storing program related data. Most languages have some ability to directly work with databases. The SQL language specifically is important because it is used broadly across multiple industries.",
 			imgDir: "/images/363images/"
 		}
 	}
@@ -26,7 +26,7 @@ WHERE payment_date IS NULL;
 `,
 			
 				img1:"selectNull.png",
-				desc:"I found this really useful as a way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
+				desc:"I found this really useful as a way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been paid yet by checking if there is not a payment date.",
 			},
 			{
 				title:"Concat, Order By",
@@ -36,14 +36,14 @@ WHERE vendor_contact_last_name REGEXP '^[A-C]|^[E]'
 ORDER BY vendor_contact_last_name, vendor_contact_first_name;`,
 			
 				img1:"concatOrder.png",
-				desc:"I found this really useful as a way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been payed yet by checking if there is not a payment date.",
+				desc:"This was a good way of selecting events that haven't happened yet. This use case is looking for all of the invoices that have not been paid yet by checking if there is not a payment date.",
 			},
 			{
 				title:"Select Date",
 				code:`SELECT DATE_FORMAT(CURRENT_DATE, '%m-%d-%Y') as 'current_date';`,
 			
 				img1:"selectDate.png",
-				desc:"Being able to get the current date from MySQL is useful when having to check how recent one of your entries are.",
+				desc:"Being able to get the current date from MySQL is useful when having to check how recent one of your entries is.",
 			},
 		];
 		let join = [
@@ -57,7 +57,7 @@ JOIN invoice_line_items li
 ORDER BY v.vendor_name, i.invoice_date, i.invoice_number, li.invoice_sequence;`,
 			
 				img1:"joinThree.png",
-				desc:"Joining different tables means that you can keep data separated, this is one of the key advantages of MySQL over a NoSQL solution.",
+				desc:"Joining different tables means that you can keep data separated. This is one of the key advantages of MySQL over a NoSQL solution.",
 			},
 			{
 				title:"Group By",
@@ -68,7 +68,7 @@ GROUP BY v.vendor_name
 ORDER BY COUNT(*) DESC;`,
 			
 				img1:"groupBy.png",
-				desc:"Group By can take data that is spread out from multiple rows with a common column, such as vendor name in the example, and count the occurrences, you can also sum if it is a number or you could find the max or min.",
+				desc:"Group By can take data that is spread out from multiple rows with a common column, such as vendor name in the example, and count the occurrences. You can also sum if it is a number or you could find the max or min.",
 			},
 		];
 
@@ -80,7 +80,7 @@ ORDER BY COUNT(*) DESC;`,
 					{/* requires 2 items in */}
 					<Tabs>
 						<div label="MySQL Select">
-							<p>The select statement is a basic operation that when chained with the rest of the language can fetch complex tables with short queries.</p>
+							<p>The select statement is a basic operation that, when chained with the rest of the language, can fetch complex tables with short queries.</p>
 							<Imgs imgs={select} imgDir={this.state.imgDir} lang={"sql"} />
 						</div>
 						<div label="Joins">
