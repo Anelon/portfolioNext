@@ -10,7 +10,7 @@ class CST300 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 300",
-			classDesc: "This class is an extended orientation. It also focuses on ethics and writing applications to prepare students for professional communications. Students are encouraged do develop various skills early on that lend to success (time management, project management, goal setting/achieving, etc.)."
+			classDesc: "This class was an extended orientation. It also focused on ethics and writing applications to prepare students for professional communications. Students were encouraged to develop various skills early on that lend to success (time management, project management, goal setting/achieving, etc.)."
 		}
 	}
 	render() {

@@ -10,7 +10,7 @@ class CST361 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 361",
-			classDesc: "The Service Learning project gives students an early opportunity to provide professional services and interact with a client.  This will be a valuable experience for making the transition from “student” to “professional”. This will also be an opportunity for students to be creative in initiating their own idea. Students will get what may be their first experience working in a professional setting with those less familiar with the technical side of projects.  Good communication skills will be key to success here.",
+			classDesc: 'The Service Learning project gives students an early opportunity to provide professional services and interact with a client. This was a valuable experience for making the transition from “student” to “professional”. This was also an opportunity for students to be creative in initiating their own ideas. Students get what may be their first experience working in a professional setting with those less familiar with the technical side of projects. Good communication skills were key to success here.',
 			imgDir: "/images/361images/"
 		}
 	}
@@ -36,7 +36,7 @@ class CST361 extends Component {
 								</div>
 								<div className="cell medium-6 large-6" >
 									<p>
-										This class was a way to reach out to the community and get involved in a project, as I was working as a tutor I took the opportunity to do more for helping people learn about computer science in a more fun way. There was a game development class going on at the time so I offered to help with that. This was a great experience as teaching others is a great way of learning, and other points of view always brings new ideas. This was a really fun learning experience as I got to work more with the Unreal engine, and it gave me a great introduction to the linear algebra that is used in rendering and game development.
+										This class was a way to reach out to the community and get involved in a project. Since I was working as a tutor, I took the opportunity to do more to help people learn about computer science in a fun way. There was a game development class going on at the time so I offered to help with that. This was a great experience as teaching others is another form of learning, and other points of view always breed new ideas. This was a really fun learning experience as I got to work more with the Unreal engine, and it gave me a great introduction to the linear algebra that is used in rendering and game development.
 									</p>
 								</div>
 								<div className="cell medium-6 large-6" >

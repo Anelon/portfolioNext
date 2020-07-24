@@ -10,20 +10,19 @@ export default function Home() {
 		<Layout location={title}>
 			<div className="grid-y full">
 				<div className="cell header">
-					<h2 className="text-center bold white">
-						<strong>Hello,</strong><br/>
-						some of my hobbies are<br/>
-						Rock Climbing, Photography, Coding
+					<h2 className="text-center bold">
+						<strong>Welcome</strong><br/>
 					</h2>
 					<h4 className="text-center">
-						Sites
+						<strong> View My </strong>
 					</h4>
 				</div>
 				<div className="cell expand">
 					<div className="grid-x grid-padding-x">
 						<div className="medium-1 cell" />
 
-						<div className="medium-5 cell">
+						<div className="medium-5 cell text-center">
+							<h4><strong>Love of Coding</strong></h4>
 							<Link href="/Portfolio">
 								<a>
 									<div className="Card small text-center">
@@ -33,7 +32,8 @@ export default function Home() {
 								</a>
 							</Link>
 						</div>
-						<div className="medium-5 cell">
+						<div className="medium-5 cell text-center">
+							<h4><strong>Love of Photography & Travel</strong></h4>
 							<a href="/japan">
 								{/*<Link to="/Japan"> change back when gallery is working*/}
 								<div className="Card small text-center">
