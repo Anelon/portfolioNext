@@ -15,6 +15,11 @@ class Portfolio extends Component {
 		let highlightProjects = [
 			//[Class Name, hasTaken]
 			{
+				name:"Mirrored Fantasy - JavaScript Node.js", hasTaken:true,
+				link:"/CSUMBPortfolio/CST499",
+				img:"/images/499images/MirroredFantasy.png"
+			},
+			{
 				name:"Robot Saga - Python", hasTaken:true,
 				link:"/CSUMBPortfolio/CST205",
 				img:"/images/205images/RobotSaga.png"
@@ -59,8 +64,8 @@ class Portfolio extends Component {
 			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:true},
 			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:true},
 			{name:"CST 370 - Algorithms (C++)", hasTaken:true},
-			{name:"CST 438 - Software Engineering (Java)", hasTaken:false},
-			{name:"CST 499 - Directed Group Capstone", hasTaken:false},
+			{name:"CST 438 - Software Engineering (Java)", hasTaken:true},
+			{name:"CST 499 - Directed Group Capstone (JavaScript)", hasTaken:true},
 		];
 		//TODO make these classes
 		let classesLowerDiv = [
