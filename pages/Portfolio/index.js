@@ -17,7 +17,7 @@ class Portfolio extends Component {
 			{
 				name:"Mirrored Fantasy - JavaScript Node.js", hasTaken:true,
 				link:"/CSUMBPortfolio/CST499",
-				img:"/images/499images/MirroredFantasy.png"
+				img:"/images/499images/mirroredFantasy.png"
 			},
 			{
 				name:"Robot Saga - Python", hasTaken:true,
