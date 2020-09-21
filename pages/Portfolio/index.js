@@ -79,8 +79,8 @@ class Portfolio extends Component {
 		];
 		return(
 			<Layout location={this.state.title}>
-				<div className="grid-x grid-padding-x full">
-					<div className="medium-6 cell">
+				<div className="grid-2">
+					<div className="">
 						<h2 className="text-center bold">
 							<strong>Hello, my name is Andrew Bell</strong><br/>
 						</h2>
@@ -94,7 +94,7 @@ I live in Fresno where I have been tutoring computer science at Clovis Community
 							<img src="/images/CSUMBLogo.png" alt="CSUMB" className="CardImg"></img>
 						</div>
 					</div>
-					<div className="medium-6 cell">
+					<div className="">
 						<Tabs>
 							{/* Add highlight projects */}
 							<div label="Projects">

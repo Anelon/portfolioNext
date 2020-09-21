@@ -29,14 +29,14 @@ class Tab extends Component {
     }    
     
     return (    
-			<a style={{color:"black"}}>
-				<li    
-					className={className}    
-					onClick={onClick}    
-				>    
-					{label}
-				</li>    
-			</a>
+        <li    
+        className={className}    
+        onClick={onClick}    
+        >    
+            <a style={{color:"black"}}>
+                {label}
+            </a>
+        </li>    
     );    
   }    
 }    

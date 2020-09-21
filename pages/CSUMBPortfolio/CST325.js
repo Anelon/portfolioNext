@@ -29,7 +29,6 @@ class CST325 extends Component {
 
 		return (
 			<Layout location={this.state.title}>
-				<div className="fullScroll">
 					{/*<h1 className="text-center">{name}</h1>*/}
 					<p className="desc">
 						{desc}
@@ -38,7 +37,6 @@ class CST325 extends Component {
 						Being someone that is interested in game development, I found this class very interesting to see how 3D environments are made. It was also intriguing to see how you can interact with the GPU. Since taking this class I have learned about compute shaders which are using the GPU for calculations.
 					</p>
 					<Imgs imgs={projects} imgDir={this.state.imgDir} lang={"text"}/>
-				</div>
 			</Layout>
 		);
 	}

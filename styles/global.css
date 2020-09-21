@@ -4,11 +4,6 @@ a {
 a:hover {
 	color:darkgray;
 }
-.content {
-	z-index: 1;
-	height: 100%;
-}
-
 p {
 	background: gray;
 	border: solid;
@@ -20,13 +15,32 @@ p {
 pre {-moz-tab-size: 4;} /* Firefox */
 pre {tab-size: 4;}
 
+.layout-grid {
+   display: grid;
+   grid-template-rows: auto 1fr;
+   grid-auto-columns: minmax(100px,auto);
+}
+
+.content {
+	z-index: 1;
+	min-height: 100%;
+   overflow:auto;
+}
+
+.grid-2 {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 10px;
+   grid-auto-rows: minmax(100px,auto);
+}
+
 .particleBackground {
-	position: absolute;
+	position: fixed;
+   top:0;
 	z-index: -1;
 	background: gray;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	width: 100vw;
+   height: 100vh;
 	pointer-events: none;
 }
 
@@ -164,13 +178,21 @@ pre {tab-size: 4;}
 	border: 2px solid black;
 	/*background: gray;*/
 	list-style-type: none;
+
+   display:grid;
+   grid-template-rows: auto;
+   align-items: center;
 }
 
 .tab-list {
 	background-color: gray;
 	border-bottom: 2px solid black;
-	margin-left: 0;
-	padding-left: 0;
+	margin: 0px;
+	padding: 0px;
+
+   display:grid;
+   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+   place-items: stretch;
 }
 
 .tab-list-item {
@@ -181,6 +203,7 @@ pre {tab-size: 4;}
 	padding: 0.75rem;
 	border-style: solid;
 	border-width: 0px 1px 2px 1px;
+   text-align: center;
 }
 
 .tab-list-active {
@@ -191,9 +214,6 @@ pre {tab-size: 4;}
 	border-width: 0px 1px 3px 1px;
 }
 
-.tab-content {
-	padding: 15px;
-}
 .videoHold {
 	height:400px;
 }

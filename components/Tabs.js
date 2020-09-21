@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 import Tab from './Tab';

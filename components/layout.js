@@ -35,7 +35,7 @@ export default function Layout({ children, location }) {
 	} else if (location === "Japan Trip") { //gallery navbar
 	}
 	return (
-		<div className="grid-y medium-grid-frame">
+		<div>
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 				<meta
@@ -52,33 +52,34 @@ export default function Layout({ children, location }) {
 				<meta name="twitter:card" content="summary_large_image" />
 				<title>{location || siteTitle}</title>
 			</Head>
-			<div className="cell shrink">    
-				<header className={styles.AppHeader}>    
-					<ul className="menu align-center">    
-						<li>    
-							<Link href="/">    
-								<a style={{padding:0}}>
-									<img
-										src="/images/logo.svg"
-										className={`${styles.AppLogo} ${utilStyles.borderCircle}`}
-										alt={name}
-									/>
-								</a>
-							</Link>    
-						</li>    
-						<li><h2 className={styles.AppTitle}>{location || siteTitle}</h2></li>
-						{Navi}    
-					</ul>    
-				</header>    
-			</div>    
+            <div className="layout-grid">
+                <div>    
+                    <header className={styles.AppHeader}>    
+                        <ul className="menu align-center">    
+                            <li>    
+                                <Link href="/">    
+                                    <a style={{padding:0}}>
+                                        <img
+                                        src="/images/logo.svg"
+                                        className={`${styles.AppLogo} ${utilStyles.borderCircle}`}
+                                        alt={name}
+                                    />
+                                        </a>
+                                    </Link>    
+                                </li>    
+                                <li><h2 className={styles.AppTitle}>{location || siteTitle}</h2></li>
+                                {Navi}    
+                            </ul>    
+                        </header>    
+                    </div>    
 
-			<main className="cell auto background">
-				{/* TODO add the particle background here I think */}
-				<ParticleBackground />
-				<div className="content">
-				{children}
-				</div>
-			</main>
+                    <div>
+                        <ParticleBackground />
+                        <main className="content">
+                            {children}
+                        </main>
+                    </div>
+                </div>
 		</div>
 	)
 }
