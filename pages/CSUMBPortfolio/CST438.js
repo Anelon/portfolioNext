@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Layout, { siteTitle } from '../../components/layout';
 import Tabs from '../../components/Tabs';
-import Videos from '../../components/Video';
+import { Video } from '../../components/Video';
 import Imgs from '../../components/Imgs';
 
 class CST438 extends Component {
@@ -30,6 +30,7 @@ class CST438 extends Component {
 			<Layout location={this.state.title}>
 				<div className="fullScroll">
 					{/*<h1 className="text-center">{name}</h1>*/}
+					<Video title={"Kana Flights"} src={"https://youtu.be/Bby5tSKTRrA"} />    
 					<p className="desc">
 						{desc}
 						<br/>

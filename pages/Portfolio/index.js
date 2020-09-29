@@ -52,30 +52,29 @@ class Portfolio extends Component {
 			},
 			*/
 ];
-		//TODO order classes by coolness/relevance
 		let classesCSUMB = [
 			//[Class Name, hasTaken]
-			{name:"CST 300 - Major Proseminar", hasTaken:true},
-			{name:"CST 205 - Multimedia and Design Programming (Python)", hasTaken:true},
-			{name:"CST 338 - Software Design (Java)", hasTaken:true},
-			{name:"CST 361 - CS and Community Service (Service Learning)", hasTaken:true},
-			{name:"CST 363 - Database Management (MySQL)", hasTaken:true},
-			{name:"CST 311 - Intro to Computer Networking", hasTaken:true},
-			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:true},
-			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:true},
-			{name:"CST 370 - Algorithms (C++)", hasTaken:true},
-			{name:"CST 438 - Software Engineering (Java)", hasTaken:true},
 			{name:"CST 499 - Directed Group Capstone (JavaScript)", hasTaken:true},
+			{name:"CST 438 - Software Engineering (Java)", hasTaken:true},
+			{name:"CST 370 - Algorithms (C++)", hasTaken:true},
+			{name:"CST 325 - Graphics Programming (JavaScript)", hasTaken:true},
+			{name:"CST 336 - Internet programming (JavaScript)", hasTaken:true},
+			{name:"CST 311 - Intro to Computer Networking", hasTaken:true},
+			{name:"CST 363 - Database Management (MySQL)", hasTaken:true},
+			{name:"CST 361 - CS and Community Service (Service Learning)", hasTaken:true},
+			{name:"CST 338 - Software Design (Java)", hasTaken:true},
+			{name:"CST 205 - Multimedia and Design Programming (Python)", hasTaken:true},
+			{name:"CST 300 - Major Proseminar", hasTaken:true},
 		];
 		//TODO make these classes
 		let classesLowerDiv = [
 			//[Class Name, hasTaken]
-			{name:"CSCI 40 - Programming Concepts (C++)", hasTaken:false},
-			{name:"CSCI 41 - Data Structures (C++)", hasTaken:false},
-			{name:"CSCI 26 - Discrete Math (C++)", hasTaken:false},
-			{name:"CSCI 45 - Assembly (Raspi, arm32, C, python)", hasTaken:false},
-			{name:"CSCI 150 - Software Engineering 1 (JavaScript)", hasTaken:false},
 			{name:"CSCI 152 - Software Engineering 2 (JavaScript, PHP, Python)", hasTaken:false},
+			{name:"CSCI 150 - Software Engineering 1 (JavaScript)", hasTaken:false},
+			{name:"CSCI 45 - Assembly (Raspi, arm32, C, python)", hasTaken:false},
+			{name:"CSCI 26 - Discrete Math (C++)", hasTaken:false},
+			{name:"CSCI 41 - Data Structures (C++)", hasTaken:false},
+			{name:"CSCI 40 - Programming Concepts (C++)", hasTaken:false},
 		];
 		return(
 			<Layout location={this.state.title}>

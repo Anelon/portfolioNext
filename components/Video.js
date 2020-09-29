@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import ReactPlayer from 'react-player';
 
-class Video extends Component {    
+export class Video extends Component {    
   constructor(props) {    
     super(props);    
     this.state = {    
@@ -17,7 +17,7 @@ class Video extends Component {
           url={src}    
           width='100%'    
           height='100%'    
-          controls='true'    
+          controls={true}
         />    
       </div>    
     )    

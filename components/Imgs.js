@@ -80,7 +80,7 @@ class Imgs extends Component {
 			let image;    
 			if(!singleImg) {
 				image = (     
-					<div>    
+					<div style={{textAlign: "center"}}>    
 						<h2 className="text-center">After</h2>    
 						<img src={`${imgDir}${src.img1}`} alt={src.img1} />    
 
@@ -90,7 +90,7 @@ class Imgs extends Component {
 				);    
 			} else {    
 				image = (     
-					<div>    
+					<div style={{textAlign: "center"}}>    
 						{/*<h2 className="text-center">Result</h2>*/}
 						<img src={`${imgDir}${src.img1}`} alt={src.img1} />    
 					</div>    
