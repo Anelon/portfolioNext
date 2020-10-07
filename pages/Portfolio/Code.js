@@ -16,7 +16,7 @@ class Code extends Component {
 						{/* centered list of programs*/}    
 						<div className="codeLinks">    
 							<h2>Home of the Magic</h2>    
-							<ul class="vertical menu">    
+							<ul className="vertical menu">    
 								<li><a href="https://github.com/anelon" className="codeLink">Github Profile</a></li>
 								<li><a href="https://anelon.github.io/rpg_game" className="codeLink">Kawaii Squid</a></li>
 								<li><a href="https://github.com/Alipongoy/CSCI152Pi/wiki/How-it-works" className="codeLink">RasPi Parking Detection and Map</a></li>

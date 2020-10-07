@@ -10,7 +10,8 @@ class CST363 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 363",
-			classDesc: "This class focused on Database Management and interaction. Databases are used in most applications and are an important type of external storage that allows for data changes in a program without needing to recompile. Databases used individually are a useful statistic and tracking tool as well as an efficient means of storing program related data. Most languages have some ability to directly work with databases. The SQL language specifically is important because it is used broadly across multiple industries.",
+			oldClassDesc: "This class focused on Database Management and interaction. Databases are used in most applications and are an important type of external storage that allows for data changes in a program without needing to recompile. Databases used individually are a useful statistic and tracking tool as well as an efficient means of storing program related data. Most languages have some ability to directly work with databases. The SQL language specifically is important because it is used broadly across multiple industries.",
+			classDesc: "This course provides balanced coverage of database use and design,focusing on relational databases. Students will learn to design relational schemas, write SQL queries, access a DB programmatically,and perform database administration. Students will gain a working knowledge of the algorithms and data structures used in query evaluation and transaction processing. Students will also learn to apply newer database technologies such as XML, NoSQL, and Hadoop.",
 			imgDir: "/images/363images/"
 		}
 	}

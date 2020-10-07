@@ -10,7 +10,8 @@ class CST361 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 361",
-			classDesc: 'The Service Learning project gives students an early opportunity to provide professional services and interact with a client. This was a valuable experience for making the transition from “student” to “professional”. This was also an opportunity for students to be creative in initiating their own ideas. Students get what may be their first experience working in a professional setting with those less familiar with the technical side of projects. Good communication skills were key to success here.',
+			oldClassDesc: 'The Service Learning project gives students an early opportunity to provide professional services and interact with a client. This was a valuable experience for making the transition from “student” to “professional”. This was also an opportunity for students to be creative in initiating their own ideas. Students get what may be their first experience working in a professional setting with those less familiar with the technical side of projects. Good communication skills were key to success here.',
+			classDesc: 'A service learning course in which students apply computer literacy, multimedia design, and technology to assist schools, nonprofit organizations, and community agencies. The theme for the course is "Bridging the Digital Divide." Note: students must participate in required service placements with hours to be arranged. Students must be able to create and manage a web site.',
 			imgDir: "/images/361images/"
 		}
 	}
@@ -30,7 +31,7 @@ class CST361 extends Component {
 					<div label="Documentary">
 						<div>
 							{/* make link look better at some point */}
-							<div class="grid-x grid-margin-x">
+							<div className="grid-x grid-margin-x">
 								<div className="cell medium-12 text-center background">
 									<h2>Service Learning</h2>
 								</div>

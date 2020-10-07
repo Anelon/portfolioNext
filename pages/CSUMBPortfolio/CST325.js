@@ -10,7 +10,7 @@ class CST325 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 325",
-			classDesc: "This course covers the concepts of fundamental game programming. In this course, it covers GPU programming, matrix linear algebra for graphics programming. Quaternion algebra which would allow one to use physics to calculate the locations of the graphics when implementing the game. The gaming industry has seen incredible growth, overtaking all other media in some regions.  This course will help keep students competitive in the market. In the orientation, the course’s professor mentioned that the applications of this course go beyond gaming and have potential with AI and machine learning. AI is seeing increased use across a wide range of software applications, from predictions to photo-editing, making these skills especially useful in the current market.",
+			classDesc: "This course teaches the students the fundamentals of game programming and skills needed for game development, including GPU programming, matrix and quaternion algebra for physics calculation, animation, lighting and basics of implementing 3D models into a framework.",
 			imgDir: "/images/325images/"
 		}
 	}

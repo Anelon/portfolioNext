@@ -10,7 +10,8 @@ class CST205 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 205",
-			classDesc: "This class was an introduction to the Python language by covering different Python functions, data types and expressions in Python. The goal of this class was to give students a conceptual understanding of digital media concepts and formats and how to manipulate digital media with the Python language. Due to the high level, cross-platform nature of the language, it is beneficial in rapidly creating and deploying software across multiple platforms.",
+			oldClassDesc: "This class was an introduction to the Python language by covering different Python functions, data types and expressions in Python. The goal of this class was to give students a conceptual understanding of digital media concepts and formats and how to manipulate digital media with the Python language. Due to the high level, cross-platform nature of the language, it is beneficial in rapidly creating and deploying software across multiple platforms.",
+			classDesc: "Introduces design, creation, and manipulation of interactive applications and electronic media for communication purpose. Focuses on creating media, understanding media concepts, and manipulating the created media using basic programming concepts of control flow, functions, expressions and data types in the Python language. Students acquire a basic understanding for digital media formats, how to design, create such media using basic programming skills.",
 			imgDir: "/images/205images/"
 		}
 	}

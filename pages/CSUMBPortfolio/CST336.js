@@ -10,7 +10,8 @@ class CST336 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 336",
-			classDesc: "This class covered JavaScript, MySQL, internet architecture, HTML and CSS. This class was important because it covers web programming with JavaScript using node.js and express.js language which would allow us to incorporate the MySql database in dynamic websites. As internet speeds continue to rise, a web-based approach is becoming the preferred method for many large companies. Additionally, large platforms such as ServiceNow allow for enterprise client specialists to insert proprietary scripts to enhance base functionality. Javascript specifically continues to remain rather high on the list of languages desired by employers.",
+			oldClassDesc: "This class covered JavaScript, MySQL, internet architecture, HTML and CSS. This class was important because it covers web programming with JavaScript using node.js and express.js language which would allow us to incorporate the MySql database in dynamic websites. As internet speeds continue to rise, a web-based approach is becoming the preferred method for many large companies. Additionally, large platforms such as ServiceNow allow for enterprise client specialists to insert proprietary scripts to enhance base functionality. Javascript specifically continues to remain rather high on the list of languages desired by employers.",
+			classDesc: "Provides students with dynamic web application development skills, focusing on the integration of server-side programming, database connectivity, and client-side scripting. Coverage includes the Internet architecture, responsive design, RESTful web services, and Web APIs.",
 			imgDir: "/images/336images/"
 		}
 	}

@@ -8,7 +8,8 @@ class CST499 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 499",
-			classDesc: "The Capstone is a demonstration of knowledge and experience gained within the program. The project acts a transition from student to professional. The most common formats for the project are 1. Platforms and programs, 2. Applied research projects, and 3. Business ventures. The experience in this course can directly translate to experiences in the workplace.",
+			oldClassDesc: "The Capstone is a demonstration of knowledge and experience gained within the program. The project acts a transition from student to professional. The most common formats for the project are 1. Platforms and programs, 2. Applied research projects, and 3. Business ventures. The experience in this course can directly translate to experiences in the workplace.",
+			classDesc: "Students will work on a project in large groups (up to 5 students in each group), developing requirements specification, a solution plan followed by design and implementation of the solution. The problem statement for the projects will be selected by the faculty. Faculty will also play the role of a project manager directing the schedule and deliverables for these projects.",
 			imgDir: "/images/499images/"
 		}
 	}

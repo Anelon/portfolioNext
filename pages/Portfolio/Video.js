@@ -20,7 +20,7 @@ class Video extends Component {
           url={src}    
           width='100%'    
           height='100%'    
-          controls='true'    
+          controls={true}    
         />    
       </div>    
     )    
@@ -54,7 +54,7 @@ class Videos extends Component {
 		});
 		return (    
 			<Layout location={this.state.title}>
-				<div class="grid-x grid-margin-x">
+				<div className="grid-x grid-margin-x">
 					{vidList}
 				</div>
 			</Layout>

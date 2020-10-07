@@ -10,7 +10,8 @@ class CST370 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 370",
-			classDesc: "This class investigates the data structures that are used in computer science in the C++ or Java language. This class covers topics such as hash tables, stacks, heaps, trees, and graph structures, as well as sorting and searching algorithms and graph traversal. Applying the knowledge from this course will help in creating optimized software. Algorithms are also used regularly in the hiring process for multiple companies to weed out the uninitiated. Proficiency developed in this course will be crucial to getting a foot in the door and landing a job.",
+			oldClassDesc: "This class investigates the data structures that are used in computer science in the C++ or Java language. This class covers topics such as hash tables, stacks, heaps, trees, and graph structures, as well as sorting and searching algorithms and graph traversal. Applying the knowledge from this course will help in creating optimized software. Algorithms are also used regularly in the hiring process for multiple companies to weed out the uninitiated. Proficiency developed in this course will be crucial to getting a foot in the door and landing a job.",
+			classDesc: "Students learn important data structures in computer science and acquire fundamental algorithm design techniques to get the efficient solutions to several computing problems from various disciplines. Topics include the analysis of algorithm efficiency, hash, heap, graph, tree, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer, transform-and-conquer, dynamic programming, and greedy programming.",
 			imgDir: "/images/370images/"
 		}
 	}

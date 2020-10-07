@@ -10,7 +10,8 @@ class CST438 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 438",
-			classDesc: "This course covers Software Engineering which covers the software development cycle, software testing and implementation. It covers the requirements for software specification and design. In this class, students are to work in a team on a software project. The course will give students the opportunity to work on a project in a more structured environment, applying software engineering and project management principles. This will be an excellent time to identify an individual’s areas of improvement that may hamper them in the professional world.",
+			oldClassDesc: "This course covers Software Engineering which covers the software development cycle, software testing and implementation. It covers the requirements for software specification and design. In this class, students are to work in a team on a software project. The course will give students the opportunity to work on a project in a more structured environment, applying software engineering and project management principles. This will be an excellent time to identify an individual’s areas of improvement that may hamper them in the professional world.",
+			classDesc: "Prepares students for large-scale software development using software engineering principles and techniques. Coverage includes software process, requirements analysis and specification, software design, implementation, testing, and project management. Students are expected to work in teams to carry out a realistic software project.",
 			imgDir: "/images/438images/"
 		}
 	}

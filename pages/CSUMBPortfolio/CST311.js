@@ -10,7 +10,8 @@ class CST338 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 311",
-			classDesc: "This course was described as a “Survey” course on inter-networking protocol, security, and industry trends. As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
+			oldClassDesc: "This course was described as a “Survey” course on inter-networking protocol, security, and industry trends. As more devices are connected to the IoT, networking is becoming even more important. Many IoT devices are less than secure due to a lack of knowledge on the subject. Large “botnets” have been maliciously created by taking advantage of this, so any students interested in the IoT should pay special attention here. This course would also be useful for those interested in cybersecurity.",
+			classDesc: "Survey of Telecomm and Data Comm Technology Fundamentals, Local Area Network, Wide Area Network, Internet and internetworking protocols including TCP/IP, network security and performance, emerging industry trends such as voice over the network and high speed networking. Designed as a foundation for students who wish to pursue more advanced network studies including certificate programs. Includes hands-on networking labs that incorporate Cisco CCNA lab components.",
 			imgDir: "/images/311images/"
 		}
 	}

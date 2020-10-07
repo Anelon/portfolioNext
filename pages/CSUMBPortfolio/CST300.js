@@ -10,7 +10,8 @@ class CST300 extends Component {
 		super(props);
 		this.state = {
 			title: "CST 300",
-			classDesc: "This class was an extended orientation. It also focused on ethics and writing applications to prepare students for professional communications. Students were encouraged to develop various skills early on that lend to success (time management, project management, goal setting/achieving, etc.)."
+			oldClassDesc: "This class was an extended orientation. It also focused on ethics and writing applications to prepare students for professional communications. Students were encouraged to develop various skills early on that lend to success (time management, project management, goal setting/achieving, etc.).",
+			classDesc: "Helps students identify and articulate personal, professional, and social goals. Provides an integrated overview of the computer science and communication design majors and their requirements. Students develop a plan for their learning goals. Students learn writing, presentation, research and critical-thinking skills within the diversified fields of information technology and communication design. Students learn how to analyze, predict, and articulate trends in the academic, public service.",
 		}
 	}
 	render() {
