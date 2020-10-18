@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import Videos from '../../components/Video';
+import Tabs from '../../components/Tabs';
 import Layout, { siteTitle } from '../../components/layout';
 import Imgs from '../../components/Imgs';
 
@@ -24,6 +26,9 @@ class CST499 extends Component {
 				ghLink:"//github.com/Anelon/Mirrored-Fantasy",
 			},
 		];
+		let videos = [
+			["Video Presentation", "https://youtu.be/Bd1Ao7UIJuU"]
+		];
 
 		return (
 			<Layout location={this.state.title}>
@@ -32,9 +37,23 @@ class CST499 extends Component {
 						{desc}
 						<br/>
 						<br/>
-                        For my capstone I decided to go with making a project as I wanted to see what I could make and I figured it would be a great way of building my portfolio. For my project I decided that making a multiplayer game would be the best way to show off all of the skills that I had learned in my computer science education. Being web based it demonstrates my knowledge of web development and the technologies around it. Games are also a great showcase of algorithms as you have to be able to optimize the program so it is fast enough to update every frame. There are also data structures as I am using lots of Hash Maps for quick look up of informatin and a QuadTree for collision lookup to name a few. The game being multiplayer there is also a demonstration of networking using the socket.io library.
+                        For my capstone I decided to go with making a project, instead of a research paper, as I wanted to see what I could make and I figured it would be a great way of building my portfolio. For my project I decided that making a multiplayer game would be the best way to show off all of the skills that I had learned in my computer science education. Being web based it demonstrates my knowledge of web development and the technologies around it. Games are also a great showcase of algorithms as you have to be able to optimize the program so it is fast enough to update every frame. There are also data structures as I am using lots of Hash Maps for quick look up of information and a QuadTree for collision lookup to name a few. The game being multiplayer there is also a demonstration of networking using the socket.io library.
 					</p>
-					<Imgs imgs={projects} imgDir={this.state.imgDir} lang={"text"}/>
+					{/* requires 2 items in */}
+					<Tabs>
+						<div label="Video Presentation">
+							<Videos videos={videos} />
+							<Imgs imgs={projects} imgDir={this.state.imgDir} lang={"text"} />
+						</div>
+						<div label="Proposal">
+							{/*<h2 className="text-center">Industry Analysis Paper</h2>*/}
+							<iframe className="paper" title="Industry Analysis" src="https://docs.google.com/document/d/e/2PACX-1vTBsOkz2iZCbXj2SLgNI6kWct4NFvAOe3X5qNcbxJKpxh0EwaKIEdcrGqMLUwO6R5WFNpO_739i1Z30/pub?embedded=true"></iframe>
+						</div>
+						<div label="Final Report">
+							{/*<h2 className="text-center">Right to Repair (Ethics Paper)</h2>*/}
+							<iframe className="paper" title="Ethics Paper" src="https://docs.google.com/document/d/e/2PACX-1vTPZvplFWv_Sm2uSu_6kS66VJZDJdryuONY-LBq1ePooFKCpPhsUJXscmEeeTqe9A6v6hg4zz2e3j04/pub?embedded=true"></iframe>
+						</div>
+					</Tabs>
 				</div>
 			</Layout>
 		);

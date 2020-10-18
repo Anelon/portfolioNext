@@ -41,7 +41,7 @@ class Videos extends Component {
     
     var vidList = vidSrc.map(function(src, index){    
       return (    
-        <div className={"cell " + size}>    
+        <div className={"cell " + size} key={src}>    
           <h2 className="text-center">{src[0]}</h2>    
           <div className="responsive-embed widescreen callout small">    
             <Video title={src[0]} src={src[1]}/>    

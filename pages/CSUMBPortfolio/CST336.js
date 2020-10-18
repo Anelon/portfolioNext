@@ -54,7 +54,7 @@ class CST336 extends Component {
 				<div className="fullScroll">
 					{/*<h1 className="text-center">{name}</h1>*/}
 					<p className="desc">
-					{desc}
+						{desc}
 						<br/>
 						<br/>
 						This was a really fun class. Having done a little bit of web development previously, I got to have fun and be creative.

@@ -91,7 +91,7 @@ ORDER BY COUNT(*) DESC;`,
 					</Tabs>
 				</div>
 			</Layout>
-											);
+		);
 	}
 }
 

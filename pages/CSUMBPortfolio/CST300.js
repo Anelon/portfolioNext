@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
+import { Document, Page } from 'react-pdf';
 import Layout from '../../components/layout';
 import Tabs from '../../components/Tabs';
 import Videos from '../../components/Video';
@@ -21,6 +22,12 @@ class CST300 extends Component {
 			["Long Version", "https://youtu.be/52cHRIwtUb0"],
 			["Short Version", "https://youtu.be/4Rnkn92Qlhg"]
 		];
+		const [numPages, setNumPages] = useState(null);
+		const [pageNumber, setPageNumber] = useState(1);
+
+		function onDocumentLoadSuccess({ numPages }) {
+			setNumPages(numPages);
+		}
 		return (
 			<Layout location={this.state.title}>
 				<div className="fullScroll">
@@ -32,11 +39,22 @@ class CST300 extends Component {
 						</div>
 						<div label="Tourism WebDev (Industry Analysis)">
 							{/*<h2 className="text-center">Industry Analysis Paper</h2>*/}
+							{/*
 							<iframe className="paper" title="Industry Analysis" src="https://docs.google.com/document/d/e/2PACX-1vTBsOkz2iZCbXj2SLgNI6kWct4NFvAOe3X5qNcbxJKpxh0EwaKIEdcrGqMLUwO6R5WFNpO_739i1Z30/pub?embedded=true"></iframe>
+							*/}
+							<Document
+								file="../../documents/TourismWebDev.pdf"
+								onLoadSuccess={onDocumentLoadSuccess}
+							>
+								<Page pageNumber={pageNumber} />
+							</Document>
+							<p>Page {pageNumber} of {numPages}</p>
 						</div>
 						<div label="Right to Repair (Ethics Paper)">
 							{/*<h2 className="text-center">Right to Repair (Ethics Paper)</h2>*/}
+							{/*
 							<iframe className="paper" title="Ethics Paper" src="https://docs.google.com/document/d/e/2PACX-1vTPZvplFWv_Sm2uSu_6kS66VJZDJdryuONY-LBq1ePooFKCpPhsUJXscmEeeTqe9A6v6hg4zz2e3j04/pub?embedded=true"></iframe>
+							*/}
 						</div>
 					</Tabs>
 				</div>
