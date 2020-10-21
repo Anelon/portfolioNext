@@ -40,13 +40,13 @@ class ClassCard extends Component {
 						</Link>
 
 						<h5>
-							<strong>
+							<b>
 								<Link href={this.state.ghLink}>
 									<a>
 										View on Github
 									</a>
 								</Link>
-							</strong>
+							</b>
 						</h5>
 					</div>
 				);

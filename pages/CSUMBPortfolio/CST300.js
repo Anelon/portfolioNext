@@ -1,10 +1,9 @@
-import { Component, useState } from 'react';
-import { Document, Page } from 'react-pdf';
+import { Component } from 'react';
 import Layout from '../../components/layout';
+import PDF from '../../components/PDF';
 import Tabs from '../../components/Tabs';
 import Videos from '../../components/Video';
 
-//import { Document, Page } from 'react-pdf'
 
 class CST300 extends Component {
 	constructor(props) {
@@ -13,7 +12,16 @@ class CST300 extends Component {
 			title: "CST 300",
 			oldClassDesc: "This class was an extended orientation. It also focused on ethics and writing applications to prepare students for professional communications. Students were encouraged to develop various skills early on that lend to success (time management, project management, goal setting/achieving, etc.).",
 			classDesc: "Helps students identify and articulate personal, professional, and social goals. Provides an integrated overview of the computer science and communication design majors and their requirements. Students develop a plan for their learning goals. Students learn writing, presentation, research and critical-thinking skills within the diversified fields of information technology and communication design. Students learn how to analyze, predict, and articulate trends in the academic, public service.",
+			rightToRepairPDF: null,
+			webDevPDF: null,
+			renderClientSide: false,
 		}
+	}
+
+	componentDidMount() {
+		this.setState({
+			renderClientSide: true,
+		});
 	}
 	render() {
 		//let name = this.state.title;
@@ -22,12 +30,6 @@ class CST300 extends Component {
 			["Long Version", "https://youtu.be/52cHRIwtUb0"],
 			["Short Version", "https://youtu.be/4Rnkn92Qlhg"]
 		];
-		const [numPages, setNumPages] = useState(null);
-		const [pageNumber, setPageNumber] = useState(1);
-
-		function onDocumentLoadSuccess({ numPages }) {
-			setNumPages(numPages);
-		}
 		return (
 			<Layout location={this.state.title}>
 				<div className="fullScroll">
@@ -42,19 +44,14 @@ class CST300 extends Component {
 							{/*
 							<iframe className="paper" title="Industry Analysis" src="https://docs.google.com/document/d/e/2PACX-1vTBsOkz2iZCbXj2SLgNI6kWct4NFvAOe3X5qNcbxJKpxh0EwaKIEdcrGqMLUwO6R5WFNpO_739i1Z30/pub?embedded=true"></iframe>
 							*/}
-							<Document
-								file="../../documents/TourismWebDev.pdf"
-								onLoadSuccess={onDocumentLoadSuccess}
-							>
-								<Page pageNumber={pageNumber} />
-							</Document>
-							<p>Page {pageNumber} of {numPages}</p>
+							{this.state.renderClientSide && <PDF pdfPath='CST300/TourismWebDev.pdf'/>} 
 						</div>
 						<div label="Right to Repair (Ethics Paper)">
 							{/*<h2 className="text-center">Right to Repair (Ethics Paper)</h2>*/}
 							{/*
 							<iframe className="paper" title="Ethics Paper" src="https://docs.google.com/document/d/e/2PACX-1vTPZvplFWv_Sm2uSu_6kS66VJZDJdryuONY-LBq1ePooFKCpPhsUJXscmEeeTqe9A6v6hg4zz2e3j04/pub?embedded=true"></iframe>
 							*/}
+							{this.state.renderClientSide && <PDF pdfPath='CST300/RightToRepair.pdf'/>} 
 						</div>
 					</Tabs>
 				</div>

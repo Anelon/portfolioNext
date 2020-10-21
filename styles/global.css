@@ -9,6 +9,14 @@ a:hover {
 	height: 100%;
 }
 
+strong {
+	background: gray;
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px;
+}
+
 p {
 	background: gray;
 	border: solid;
@@ -216,4 +224,21 @@ pre {tab-size: 4;}
 .imageDiv {
 	margin-top: 10px;
 	border-top: solid;
+}
+
+.react-pdf__Document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-pdf__Page {
+    max-width: calc(100% - 2em);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    margin: 1em;
+}
+
+.react-pdf__message {
+    padding: 20px;
+    color: white;
 }

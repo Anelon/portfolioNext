@@ -46,9 +46,9 @@ class Imgs extends Component {
 						{src.link ? (
 							<Link href={`${src.link}`}>
 								<a>
-									<strong>
+									<b>
 										View Site
-									</strong>
+									</b>
 								</a>
 							</Link>
 						) : null }
@@ -58,9 +58,9 @@ class Imgs extends Component {
 						{src.ghLink ? (
 							<Link href={`${src.ghLink}`}>
 								<a>
-									<strong>
+									<b>
 										Code on Github
-									</strong>
+									</b>
 								</a>
 							</Link>
 						) : null }
