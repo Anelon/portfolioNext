@@ -1,13 +1,16 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
-import ParticleBackground from './ParticleBackground';
+import ParticleBackground from './ParticleBackground'
 
 const name = 'Andrew Bell'
 export let siteTitle = 'Kass and Andrew'
 
 export default function Layout({ children, location }) {
+	const router = useRouter();
+	const [toss, folder, path] = router.pathname.split("/", 3);
 	let Navi = ( //default navbar (home)
 		<>
 			<Link href="/">
@@ -21,18 +24,21 @@ export default function Layout({ children, location }) {
 			</Link>
 		</>
 	);
-	if (location === "Portfolio" || location[0] === "C") { //portfolio navbar
+	if (folder === "Portfolio" || folder === "CSUMBPortfolio") { //portfolio navbar
 		Navi = (
 			<>
 				<li><Link href="/Portfolio">
 					<a className={styles.NavLink}>Home</a>
 				</Link></li>
-				<li><Link href="/CSUMBPortfolio/CST336">
-					<a className={styles.NavLink}>Favorite Class</a>
+				<li><Link href="/CSUMBPortfolio/CST499">
+					<a className={styles.NavLink}>Capstone Class</a>
+				</Link></li>
+				<li><Link href="/Portfolio/Resume">
+					<a className={styles.NavLink}>Resume</a>
 				</Link></li>
 			</>
 		);
-	} else if (location === "Japan Trip") { //gallery navbar
+	} else if (folder === "Japan Trip") { //gallery navbar
 	}
 	return (
 		<div className="grid-y medium-grid-frame">

@@ -33,6 +33,7 @@ export default function PDF(props) {
                 file={pdfDirPath + props.pdfPath}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
+                { numPages > 1 ? //if there is more than 1 page show page select
                 <div>
                     <p>
                         <button
@@ -54,6 +55,8 @@ export default function PDF(props) {
                         </button>
                     </p>
                 </div>
+                : null
+                }
                 <Page pageNumber={pageNumber} />
             </Document>
         </>

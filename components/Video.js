@@ -5,11 +5,11 @@ export class Video extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      vidsrc: this.props.src,
+      vidSrc: this.props.src,
     }
   }
   render() {
-    var src = this.state.vidsrc;
+    var src = this.state.vidSrc;
     return (
       <div>
         <ReactPlayer
