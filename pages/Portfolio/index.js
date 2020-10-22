@@ -15,9 +15,15 @@ class Portfolio extends Component {
 		let highlightProjects = [
 			//[Class Name, hasTaken]
 			{
-				name: "Mirrored Fantasy - JavaScript Node.js", hasTaken: true,
+				name: "Mirrored Fantasy - JavaScript, Node.js", hasTaken: true,
 				link: "/CSUMBPortfolio/CST499",
+				ghLink: "//github.com/Anelon/Mirrored-Fantasy",
 				img: "/images/499images/mirroredFantasy.png"
+			},
+			{
+				name: "Parking Detection - HTML, JS, PHP, MySQL, Python, Raspberry Pi, OpenCV", hasTaken: true,
+				link: "//github.com/Alipongoy/CSCI152Pi/wiki/How-it-works",
+				img: "https://camo.githubusercontent.com/813de90b696ad7909f33a71f9c658668ba0b2e91/68747470733a2f2f692e696d6775722e636f6d2f63796f734138562e706e67",
 			},
 			{
 				name: "Robot Saga - Python", hasTaken: true,
@@ -35,11 +41,6 @@ class Portfolio extends Component {
 				link: "//anelon.github.io/rpg2/",
 				ghLink: "//github.com/Anelon/rpg2/",
 				img: "/images/336images/golemsQuest.png"
-			},
-			{
-				name: "Parking Detection - HTML, JS, PHP, MySQL, Python, Raspberry Pi, OpenCV", hasTaken: true,
-				link: "//github.com/Alipongoy/CSCI152Pi/wiki/How-it-works",
-				img: "https://camo.githubusercontent.com/813de90b696ad7909f33a71f9c658668ba0b2e91/68747470733a2f2f692e696d6775722e636f6d2f63796f734138562e706e67",
 			},
 			{
 				name: "Tic Tac Toe (AI) - React.js", hasTaken: true,
